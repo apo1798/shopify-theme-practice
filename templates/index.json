@@ -21,7 +21,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "逛逛商店",
-            "button_link_1": "shopify://collections/all",
+            "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -29,7 +29,11 @@
           }
         }
       },
-      "block_order": ["heading", "text", "button"],
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
@@ -37,7 +41,7 @@
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
+        "color_scheme": "inverse",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
@@ -56,11 +60,14 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>我們致力於提供環保、耐用、高品質的台灣文具。設計結合各式台灣傳統文化元素，讓文具不只是書寫與文書，更是文化上的享受。</strong></p>"
+            "text": "<p><strong>我們致力於提供環保、耐用、高品質的台灣文具。設計結合各式台灣傳統文化元素，讓文具不只是書寫與文書，更是文化上的享受。<\/strong><\/p>"
           }
         }
       },
-      "block_order": ["heading", "text"],
+      "block_order": [
+        "heading",
+        "text"
+      ],
       "settings": {
         "color_scheme": "background-1",
         "full_width": true,
@@ -118,7 +125,11 @@
           }
         }
       },
-      "block_order": ["collection-0", "product", "collection-1"],
+      "block_order": [
+        "collection-0",
+        "product",
+        "collection-1"
+      ],
       "settings": {
         "heading": "台灣鬼怪聯名商品",
         "heading_size": "h2",
@@ -134,7 +145,7 @@
       "settings": {
         "heading": "",
         "heading_size": "h1",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
         "color_scheme": "background-1",
@@ -149,7 +160,7 @@
           "type": "column",
           "settings": {
             "title": "阿成文具行的根本",
-            "text": "<p>那麼，我們一般認為，抓住了問題的關鍵，其他一切則會迎刃而解。徐志摩深信，由於我們過於習慣在別人面前戴面具，因此最後導致在自己面前偽裝自己。</p>",
+            "text": "<p>那麼，我們一般認為，抓住了問題的關鍵，其他一切則會迎刃而解。徐志摩深信，由於我們過於習慣在別人面前戴面具，因此最後導致在自己面前偽裝自己。<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -158,7 +169,7 @@
           "type": "column",
           "settings": {
             "title": "日思夜想的品質提升",
-            "text": "<p>本人也經過了深思熟慮，日日夜夜思考這個問題。若無法徹底理解阿成文具行，恐怕會是人類的一大遺憾。若思緒夠清晰，那麼阿成文具行也就不那麼複雜了。</p>",
+            "text": "<p>本人也經過了深思熟慮，日日夜夜思考這個問題。若無法徹底理解阿成文具行，恐怕會是人類的一大遺憾。若思緒夠清晰，那麼阿成文具行也就不那麼複雜了。<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -167,13 +178,17 @@
           "type": "column",
           "settings": {
             "title": "如履薄冰精神",
-            "text": "<p>若能夠欣賞到阿成文具行的美，相信我們一定會對阿成文具行改觀。劉基講過一句值得人反覆尋思的話，凡與敵戰，須務持重。見利則動，不見利則止，慎不可輕舉也。</p>",
+            "text": "<p>若能夠欣賞到阿成文具行的美，相信我們一定會對阿成文具行改觀。劉基講過一句值得人反覆尋思的話，凡與敵戰，須務持重。見利則動，不見利則止，慎不可輕舉也。<\/p>",
             "link_label": "",
             "link": ""
           }
         }
       },
-      "block_order": ["column1", "column2", "column3"],
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",

@@ -2,10 +2,10 @@
   "current": {
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
-    "gradient_accent_1": "",
+    "gradient_accent_1": "linear-gradient(133deg, rgba(51, 79, 180, 1) 11%, rgba(250, 220, 54, 1) 87%, rgba(254, 98, 146, 1) 90%)",
     "colors_accent_2": "#334fb4",
     "gradient_accent_2": "",
-    "colors_text": "#121212",
+    "colors_text": "#1e1e1e",
     "colors_outline_button_labels": "#121212",
     "colors_background_1": "#ffffff",
     "gradient_background_1": "",
@@ -103,14 +103,17 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "Welcome to our store",
-              "color_scheme": "background-1",
+              "text": "6\/13-6\/24全館感謝祭，商品任兩件即享九折優惠！",
+              "color_scheme": "accent-1",
               "link": ""
             }
           }
         },
-        "block_order": ["announcement-bar-0"],
-        "settings": {}
+        "block_order": [
+          "announcement-bar-0"
+        ],
+        "settings": {
+        }
       },
       "header": {
         "type": "header",
@@ -146,11 +149,15 @@
             "type": "text",
             "settings": {
               "heading": "給您最好的品質",
-              "subtext": "<p>三十年傳承，品質不敢不怠。全台<a href='https://google.com' target='_blank' rel='noreferrer noopener'>三間據點</a>，歡迎您親自來訪。</p>"
+              "subtext": "<p>三十年傳承，品質不敢不怠。全台<a href='https:\/\/google.com' target='_blank' rel='noreferrer noopener'>三間據點<\/a>，歡迎您親自來訪。<\/p>"
             }
           }
         },
-        "block_order": ["footer-0", "footer-1", "footer-2"],
+        "block_order": [
+          "footer-0",
+          "footer-1",
+          "footer-2"
+        ],
         "settings": {
           "color_scheme": "background-1",
           "newsletter_enable": true,
@@ -178,7 +185,9 @@
         }
       }
     },
-    "content_for_index": []
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {
@@ -291,8 +300,11 @@
               }
             }
           },
-          "block_order": ["announcement-bar-0"],
-          "settings": {}
+          "block_order": [
+            "announcement-bar-0"
+          ],
+          "settings": {
+          }
         },
         "header": {
           "type": "header",
@@ -327,11 +339,15 @@
               "type": "text",
               "settings": {
                 "heading": "Our mission",
-                "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
+                "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
               }
             }
           },
-          "block_order": ["footer-0", "footer-1", "footer-2"],
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
           "settings": {
             "color_scheme": "background-1",
             "newsletter_enable": true,
