@@ -9,6 +9,7 @@
     },
     "1655351033cc9e668b": {
       "type": "rich-text",
+      "disabled": true,
       "blocks": {
         "165535103393ef2839-0": {
           "type": "heading",
@@ -30,6 +31,7 @@
     },
     "1655351030530b99bf": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "{{ page.title }}",
         "color_scheme": "background-1",
@@ -39,6 +41,7 @@
     },
     "165535118796769835": {
       "type": "rich-text",
+      "disabled": true,
       "blocks": {
         "165535118732da4de6-0": {
           "type": "heading",
@@ -60,6 +63,7 @@
     },
     "1655351338442b45c5": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "{% if page.title == 'Liquid'%}\n Yes, the title is Liquid.\n{% endif %}",
         "color_scheme": "background-1",
@@ -69,6 +73,7 @@
     },
     "1655351340c4a38d70": {
       "type": "rich-text",
+      "disabled": true,
       "blocks": {
         "16553513400856e99b-0": {
           "type": "heading",
@@ -90,6 +95,7 @@
     },
     "16553557827ecb1791": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "{{ \"hello world\" | capitalize }}",
         "color_scheme": "background-1",
