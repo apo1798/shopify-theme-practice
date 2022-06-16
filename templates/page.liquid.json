@@ -6,9 +6,105 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "1655351033cc9e668b": {
+      "type": "rich-text",
+      "blocks": {
+        "165535103393ef2839-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Object",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "165535103393ef2839-0"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1655351030530b99bf": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ page.title }}",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "165535118796769835": {
+      "type": "rich-text",
+      "blocks": {
+        "165535118732da4de6-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Tag -> Controlling Logic",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "165535118732da4de6-0"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1655351338442b45c5": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% if page.title == 'Liquid'%}\n Yes, the title is Liquid.\n{% endif %}",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1655351340c4a38d70": {
+      "type": "rich-text",
+      "blocks": {
+        "16553513400856e99b-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Filter",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "16553513400856e99b-0"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "16553557827ecb1791": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ \"hello world\" | capitalize }}",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1655351033cc9e668b",
+    "1655351030530b99bf",
+    "165535118796769835",
+    "1655351338442b45c5",
+    "1655351340c4a38d70",
+    "16553557827ecb1791"
   ]
 }
