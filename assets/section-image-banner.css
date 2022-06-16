@@ -365,7 +365,6 @@
 
 .banner__box > * + .banner__text {
   margin-top: 1.5rem;
-  color: #262626;
 }
 
 @media screen and (min-width: 750px) {
