@@ -1,7 +1,41 @@
-<h3>This works! (from liquid-practice.liquid created by ourselves)</h3>
+<h1>Text</h1>
+{{ section.settings.liquid-practice }} <br>
 
-<p>{{section.settings.id}}</p>
-<p>HEY</p>
+<h1>Checkbox</h1>
+{% if section.settings.liquid-checkbox == true %}
+  Checkbox is checked
+{% else %}
+  Checkbox is NOT checkeed
+{% endif %}
+
+<br>
+
+<h1>Number</h1>
+{% if section.settings.liquid-number > 0 %}
+  <p>
+    The input number is {{ section.settings.liquid-number}}
+  </p>
+{% endif %}
+
+<br>
+
+<h1>Radio</h1>
+{% if section.settings.liquid-radio == 'option-1' %}
+  Option 1 Selected
+{% else %}
+  Option 2 Selected
+{% endif %}
+
+<br>
+
+<h1>Range</h1>
+{{ section.settings.liquid-range}} <br>
+
+<h1>Select</h1>
+{{ section.settings.liquid-select }} </br>
+
+<h1>Text Area</h1>
+{{ section.settings.liquid-textarea}} </br>
 
 {% schema %}
 {
@@ -10,7 +44,67 @@
     {
       "id": "liquid-practice",
       "type": "text",
-      "label": "A practice for Shopify Liquid"
+      "label": "Text"
+    },
+    {
+      "id": "liquid-checkbox",
+      "type": "checkbox",
+      "label": "Checkbox"
+    },
+    {
+      "id": "liquid-number",
+      "type": "number",
+      "label": "Number"
+    },
+    {
+      "id": "liquid-radio",
+      "type": "radio",
+      "label": "Radio",
+      "options": [
+        {
+          "value": "option-1",
+          "label": "Option 1"
+        },
+        {
+          "value": "option-2",
+          "label": "Option 2"
+        }
+      ]
+    },
+    {
+      "id": "liquid-range",
+      "type": "range",
+      "label": "Range",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "id": "liquid-select",
+      "type": "select",
+      "label": "Select",
+      "options": [
+        {
+          "value": "Option 1",
+          "label": "Option 1"
+        },
+        {
+          "value": "Option 2",
+          "label": "Option 2"
+        },
+        {
+          "value": "Option 3",
+          "label": "Option 3"
+        }
+      ],
+      "default": "Option 2"
+    },
+    {
+      "id": "liquid-textarea",
+      "type": "textarea",
+      "label": "Textarea",
+      "default": "This is a textarea for user to input something!!"
     }
   ],
   "templates": [

@@ -318,7 +318,7 @@
         {%- endif -%}
       </div>
       <div class="footer__column footer__column--info">
-        {%- if section.settings.payment_enable -%}
+        <!-- {%- if section.settings.payment_enable -%}
           <div class="footer__payment">
             <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
             <ul class="list list-payment" role="list">
@@ -329,12 +329,73 @@
               {%- endfor -%}
             </ul>
           </div>
-        {%- endif -%}
+        {%- endif -%} -->
+
+        <style>
+          .icon {
+            width: 3.125em;
+          }
+          .visuallyhidden {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+            white-space: nowrap;
+          }
+          </style>
+          
+          {%- unless shop.enabled_payment_types == empty -%}
+            <span class="visuallyhidden">Supported payment methods</span>
+          
+            <ul>
+              {%- for type in shop.enabled_payment_types -%}
+                <li>
+                  {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- endunless -%}
+
         <div class="footer__copyright caption">
           <small class="copyright__content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</small>
           <small class="copyright__content">{{ powered_by_link }}</small>
         </div>
       </div>
+
+      <!-- <style>
+        .icon {
+          width: 3.125em;
+        }
+        .visuallyhidden {
+          border: 0;
+          clip: rect(0 0 0 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;
+          white-space: nowrap;
+        }
+        </style>
+        
+        {%- unless shop.enabled_payment_types == empty -%}
+          <span class="visuallyhidden">Supported payment methods</span>
+        
+          <ul>
+            {%- for type in shop.enabled_payment_types -%}
+              <li>
+                {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endunless -%} -->
+
+
     </div>
   </div>
 </footer>

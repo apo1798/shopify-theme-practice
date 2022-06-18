@@ -1,0 +1,88 @@
+{% style %}
+.blog-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.blog-section div {
+  flex-grow: 1;
+  flex-basis: max(33%, 30rem);
+  margin-left: 3rem;
+}
+
+.blog-section a:visited,
+.blog-section a:link {
+  text-decoration: none;
+  color: #333;
+  transition: all .2s linear;
+}
+
+.blog-section a:hover,
+.blog-section a:active {
+  color: blue;
+}
+{% endstyle %}
+
+
+<h3>Blog Post Practice Range Test</h3>
+
+{% assign blog = section.settings.new-blog %}
+
+
+<p>{{section.settings.new-blog.articles_count}}</p>
+
+{% unless blog.articles_count == 0 %}
+  <!-- Display articles based on range  -->
+  <section class="blog-section">  
+
+    {% for article in blog.articles limit: section.settings.post-range %}
+      <div>
+        <a href="{{ article.url }}">
+          <img src="{{ article.image | img_url: '500x500' }}">
+        </a>
+        <br/>
+        <a href="{{ article.url }}">
+          {{section.settings.new-blog}}文章 {{ article.title }}
+        </a>
+      </div>
+    {% endfor %}  
+
+  </section>
+
+
+
+{% endunless %}
+
+<script>
+
+  console.log({{ section.settings.new-blog | json }});
+</script>
+
+{% schema %}
+{
+  "name": "Blog Post Practice",
+  "settings": [
+    {
+      "id": "new-blog",
+      "type": "blog",
+      "label": "blog"
+    },
+    {
+      "id": "post-range",
+      "type": "range",
+      "label": "Range",
+      "min": 3,
+      "max": 12,
+      "step": 1,
+      "default": 3
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog Post Practice",
+      "category": "Posts"
+    }
+  ]
+}
+{% endschema %}

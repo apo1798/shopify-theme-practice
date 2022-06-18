@@ -1,0 +1,60 @@
+{{ 'social/social-icons.css' | global_asset_url | stylesheet_tag }}
+
+<div hidden>
+  <span id="new-window-0">Opens in a new window</span>
+</div>
+
+<section class="page-width">
+  <h2>{{ section.settings.social-nav }}</h2>
+
+  <ul class="social-media-menu">
+
+    {% for block in section.blocks %}
+      <li>
+        <a aria-describedby="new-window-0" aria-label="" {{ block.settings.social-name }} "" href="{{ block.settings.social-url }}" rel="noopener" target="_blank">
+          <span
+            aria-hidden="true"
+            class="shopify-social-icon-{{ block.settings.social-name |  downcase}}-circle" />
+        </a>
+      </li>
+    {% endfor %}
+
+  </ul>
+</section>
+
+{% schema %}
+{
+  "name": "Social Meida Nav",
+  "settings": [
+    {
+      "id": "social-nav",
+      "type": "text",
+      "label": "Title Message"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Social Media Nav",
+      "category": "Social"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Social Media Network",
+      "type": "social-network",
+      "settings": [
+        {
+          "id": "social-url",
+          "type": "url",
+          "label": "URL"
+        },
+        {
+          "id": "social-name",
+          "type": "text",
+          "label": "Network name"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
