@@ -1,0 +1,94 @@
+<h1>這是從practice-object.liquid裡的H1</h1>
+
+<p>{{ page_title}}</p>
+<p>{{ page_description}}</p>
+<p>{{ handle }}</p>
+<p>{{ all_products[handle].title }}</p>
+
+<p>{{ canonical_url }}</p>
+
+<p>request.page_type -> {{ request.page_type }}</p>
+
+{% for collection in collections %}
+  <p>{{ collection.title }}</p>
+{% endfor %}
+
+<!-- {% for script in scripts %}
+  <p>Script {{ script.id }}</p>
+{% endfor %} -->
+
+<!-- Product Object -->
+<h1>product.available</h1>
+{{ product.available}}
+
+<h1>product.collections</h1>
+{% for collection in product.collections %}
+  {{ collection.title }}
+{% endfor %}
+
+<h1>product.compare_at_price</h1>
+{{ product.compare_at_price  | money_without_trailing_zeros }}
+
+<h1>product.content</h1>
+{{ product.content }}
+
+<h1>product.created_at</h1>
+{{ product.created_at | date: "%Y/%-m月新出產品"}}
+
+<h1>product.featured_image</h1>
+<img src="{{ product.featured_image.src | img_url: 'medium' }}" alt="">
+<p>{{ product.featured_image.src }}</p>
+<p>{{ product.featured_image.height }}</p>
+<p>{{ product.featured_image.width }}</p>
+
+<h1>product.variant</h1>
+{% for variant in product.variants %}
+
+  {{ variant.title }}
+{% endfor %}
+
+<h1>Customer Login Link</h1>
+{{ 'Log in' | customer_login_link }}
+
+<h1>product.handle</h1>
+{{ product.handle }}
+{% assign productHandle = product.handle %}
+{{ productHandle }}
+
+<h1>Using 'blank' checking empty string</h1>
+{% assign my_string = '' %}
+{% unless my_string == '' %}
+  <p>my_string is not empty</p>
+{% endunless %}
+
+<h1>Global Objects</h1>
+{% for product in all_prdocuts %}
+  <p>{{ product }}</p>
+{% endfor %}
+
+{% for aricle in articles %}
+  <p>{{ article.title }}</p>
+{% endfor %}
+
+<p>{{ canonical_url }}</p>
+<p>{{ handle }}</p>
+
+<!-- <script>
+  console.log({{ product.selected_or_first_available_variant | json }});
+</script> --> {% schema %}
+{
+  "name": "Liquid Object",
+  "settings": [  
+    {
+      "id": "liq-obj",
+      "type":"text",
+      "label": "Add your text"
+    }
+  ],
+  "presets":[
+  {
+      "name" : "Liquid Objects",
+      "category":"Reference"
+    } 
+  ]
+} {% endschema %}

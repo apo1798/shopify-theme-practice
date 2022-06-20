@@ -1,0 +1,9 @@
+.gallery {
+  padding: 2rem;
+  background-color: red;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

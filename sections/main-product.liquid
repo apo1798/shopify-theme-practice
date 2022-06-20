@@ -9,18 +9,20 @@
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
   {%- style -%}
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-    }
 
-    @media screen and (min-width: 750px) {
-      .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top }}px;
-        padding-bottom: {{ section.settings.padding_bottom }}px;
-      }
-    }
-  {%- endstyle -%}
+.section-{{section.id}}-padding {
+  padding-top: {{section.settings.padding_top | times: 0.75 | round: 0}}px;
+  padding-bottom: {{section.settings.padding_bottom | times: 0.75 | round: 0}}px;
+}
+
+@media screen and(min-width: 750px) {
+  .section-{{section.id}}-padding {
+    padding-top: {{section.settings.padding_top}}px;
+    padding-bottom: {{section.settings.padding_bottom}}px;
+  }
+}
+
+{%- endstyle -%}
 
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
@@ -348,8 +350,8 @@
                       </fieldset>
                   {%- endfor -%}
                   <script type="application/json">
-                    {{ product.variants | json }}
-                  </script>
+{{ product.variants | json }}
+</script>
                 </variant-radios>
               {%- else -%}
                 <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
@@ -376,8 +378,8 @@
                   {%- endfor -%}
 
                   <script type="application/json">
-                    {{ product.variants | json }}
-                  </script>
+{{ product.variants | json }}
+</script>
                 </variant-selects>
               {%- endif -%}
             {%- endunless -%}
@@ -586,40 +588,16 @@
   -%}
 
   <script type="application/ld+json">
-    {
-      "@context": "http://schema.org/",
-      "@type": "Product",
-      "name": {{ product.title | json }},
-      "url": {{ request.origin | append: product.url | json }},
-      {% if seo_media -%}
-        "image": [
-          {{ seo_media | image_url: width: seo_media.preview_image.width | prepend: "https:" | json }}
-        ],
-      {%- endif %}
-      "description": {{ product.description | strip_html | json }},
-      {% if product.selected_or_first_available_variant.sku != blank -%}
-        "sku": {{ product.selected_or_first_available_variant.sku | json }},
-      {%- endif %}
-      "brand": {
-        "@type": "Thing",
-        "name": {{ product.vendor | json }}
-      },
-      "offers": [
-        {%- for variant in product.variants -%}
-          {
-            "@type" : "Offer",
-            {%- if variant.sku != blank -%}
-              "sku": {{ variant.sku | json }},
-            {%- endif -%}
-            "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
-            "price" : {{ variant.price | divided_by: 100.00 | json }},
-            "priceCurrency" : {{ cart.currency.iso_code | json }},
-            "url" : {{ request.origin | append: variant.url | json }}
-          }{% unless forloop.last %},{% endunless %}
-        {%- endfor -%}
-      ]
-    }
-  </script>
+
+[36mLine: 2[0m
+[31m(empty line)[0m
+[31m[36mLine: 1[0m[0m
+[31m[31m[36 mLine : 1 [[0m[0m
+[31m[31m        0 m [[0m[0m
+[31m[31m            31 m[[0m[0m
+[31m[31m                36 mLine : 2 [[0m[0m
+[31m[31m                    [[0m[0m
+</script>
 </section>
 
 {% schema %}
