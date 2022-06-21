@@ -1,4 +1,5 @@
 {% style %}
+
 .blog-section {
   display: flex;
   flex-wrap: wrap;
@@ -15,26 +16,25 @@
 .blog-section a:link {
   text-decoration: none;
   color: #333;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
 }
 
 .blog-section a:hover,
 .blog-section a:active {
   color: blue;
 }
-{% endstyle %}
 
+{% endstyle %}
 
 <h3>Blog Post Practice Range Test</h3>
 
 {% assign blog = section.settings.new-blog %}
 
-
 <p>{{section.settings.new-blog.articles_count}}</p>
 
 {% unless blog.articles_count == 0 %}
   <!-- Display articles based on range  -->
-  <section class="blog-section">  
+  <section class="blog-section">
 
     {% for article in blog.articles limit: section.settings.post-range %}
       <div>
@@ -46,16 +46,13 @@
           {{section.settings.new-blog}}文章 {{ article.title }}
         </a>
       </div>
-    {% endfor %}  
+    {% endfor %}
 
   </section>
-
-
 
 {% endunless %}
 
 <script>
-
   console.log({{ section.settings.new-blog | json }});
 </script>
 

@@ -1,10 +1,20 @@
+{% style %}
+
+.custom-color {
+  color: {{section.settings.font_color}};
+}
+
+{% endstyle %}
+
 {{ 'section-gallery.css' | asset_url | stylesheet_tag }}
+
+<div class="color-container">
+  <h2>Hello from the test-practice.liquid</h2>
+</div>
 
 <p>{{ 'section-gallery.css' | asset_url | stylesheet_tag }}</p>
 
-<h2>Hello from the test-practice.liquid</h2>
-
-<h4>{{ section.settings.test_notice  }}</h4>
+<h4>{{  section.settings.test_notice  }}</h4>
 
 {% if section.settings.show_star %}
   <p>⭐️⭐️⭐️⭐️⭐️</p>
@@ -20,29 +30,48 @@
   {% endcase %}
 {% endfor %}
 
-<script>
+{% assign articleName = section.settings.article %}
 
-  console.log({{ 'section-gallery.css' | asset_url | stylesheet_tag | json }});
+<p class="custom-color">Its color can be controlled by the color picker.</p>
+
+{{ section.settings.article }}
+
+<script>
+  console.log({{ section.settings | json }});
+  console.log({{ articles[section.settings.article] | json }});
+  console.log({{ section.settings.font_color | json }});
 </script>
 
 {% schema %}
 {
   "name": "Name_in_the_name",
   "tag": "section",
-  "class": "red-container",
+  "class": "custom-container",
   "limit": 2,
   "settings": [  
     {
       "id": "test_notice",
       "type":"text",
       "label": "Test notice",
-      "default": "Default Notice"
+      "default": "Default Notice",
+      "info": "An additional info"
     },
     {
       "id": "show_star",
       "type": "checkbox",
       "label": "Show review stars",
       "default": true
+    },
+    {
+      "type": "article",
+      "id": "article",
+      "label": "Article"
+    },
+    {
+      "id": "font_color",
+      "type": "color",
+      "label": "字體顏色",
+      "default": "#000000"
     }
   ],
   "blocks": [
