@@ -1,0 +1,66 @@
+{{ 'section-gallery.css' | asset_url | stylesheet_tag }}
+
+<p>{{ 'section-gallery.css' | asset_url | stylesheet_tag }}</p>
+
+<h2>Hello from the test-practice.liquid</h2>
+
+<h4>{{ section.settings.test_notice  }}</h4>
+
+{% if section.settings.show_star %}
+  <p>⭐️⭐️⭐️⭐️⭐️</p>
+{% endif %}
+
+{% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'slide' %}
+      <div class="slide" {{ block.shopify_attributes }}>
+        {{ block.settings.image | image_url: width: 300 | image_tag }}
+      </div>
+      ...
+  {% endcase %}
+{% endfor %}
+
+<script>
+
+  console.log({{ 'section-gallery.css' | asset_url | stylesheet_tag | json }});
+</script>
+
+{% schema %}
+{
+  "name": "Name_in_the_name",
+  "tag": "section",
+  "class": "red-container",
+  "limit": 2,
+  "settings": [  
+    {
+      "id": "test_notice",
+      "type":"text",
+      "label": "Test notice",
+      "default": "Default Notice"
+    },
+    {
+      "id": "show_star",
+      "type": "checkbox",
+      "label": "Show review stars",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets":[
+    {
+      "name" : "Name in the presets"
+    } 
+  ]
+} {% endschema %}
