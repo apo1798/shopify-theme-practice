@@ -1,4 +1,4 @@
-{% style %}
+{{ 'section-gallery.css' | asset_url | stylesheet_tag }} {% style %}
 
 .custom-color {
   color: {{section.settings.font_color}};
@@ -6,13 +6,9 @@
 
 {% endstyle %}
 
-{{ 'section-gallery.css' | asset_url | stylesheet_tag }}
-
 <div class="color-container">
   <h2>Hello from the test-practice.liquid</h2>
 </div>
-
-<p>{{ 'section-gallery.css' | asset_url | stylesheet_tag }}</p>
 
 <h4>{{  section.settings.test_notice  }}</h4>
 
