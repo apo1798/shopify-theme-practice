@@ -1,0 +1,71 @@
+.carousel {
+  margin: 0 auto;
+  max-width: 1280px;
+  background-color: gold;
+  position: relative;
+
+  &-button {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 1rem;
+    font-size: 3rem;
+    z-index: 10;
+    top: 50%;
+    transform: translateY((-50%));
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    padding: 0.5rem;
+
+    &:hover,
+    &:focus {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    &:focus {
+      outline: 1px solid white;
+    }
+
+    &.prev {
+      left: 1rem;
+    }
+
+    &.next {
+      right: 1rem;
+    }
+  }
+
+  // Not to let the carousel without any content (bad practice BUG
+  &-image:nth-child(1) {
+    position: relative;
+  }
+
+  &-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+
+    &[data-active] {
+      transition-delay: 0ms;
+      z-index: 5;
+      opacity: 1;
+    }
+
+    img {
+      max-width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  // Delete all default style of unordered list
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}

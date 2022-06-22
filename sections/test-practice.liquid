@@ -30,15 +30,11 @@
 
 <p class="custom-color">Its color can be controlled by the color picker.</p>
 
-{{ section.settings.article }}
-
-<script>
+{{ section.settings.article }} <!-- <script>
   console.log({{ section.settings | json }});
   console.log({{ articles[section.settings.article] | json }});
   console.log({{ section.settings.font_color | json }});
-</script>
-
-{% schema %}
+</script> --> {% schema %}
 {
   "name": "Name_in_the_name",
   "tag": "section",
