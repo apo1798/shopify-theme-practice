@@ -1,5 +1,22 @@
 {
   "sections": {
+    "165586395565446ad0": {
+      "type": "apps",
+      "blocks": {
+        "6cf80b4b-2cce-468d-87cb-fdf6ce7b96c2": {
+          "type": "shopify:\/\/apps\/image-slider-ea\/blocks\/embed-code\/187cfdb3-f7ca-4af8-9477-517eb71154e7",
+          "settings": {
+            "embed-code": "<div id=\"enap-slider-17319\"><\/div> <script src=\"https:\/\/www.enormapps.com\/slider-v2\/assets\/frontend\/js\/embed.js\" data-id=\"17319\" async defer><\/script>"
+          }
+        }
+      },
+      "block_order": [
+        "6cf80b4b-2cce-468d-87cb-fdf6ce7b96c2"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
     "16558006500888fefe": {
       "type": "test-practice",
       "settings": {
@@ -223,6 +240,7 @@
     }
   },
   "order": [
+    "165586395565446ad0",
     "16558006500888fefe",
     "image_banner",
     "rich_text",
