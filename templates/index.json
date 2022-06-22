@@ -238,6 +238,18 @@
       "settings": {
         "liq-obj": ""
       }
+    },
+    "165588215846629b62": {
+      "type": "liquid-practice",
+      "settings": {
+        "liquid-practice": "123",
+        "liquid-checkbox": false,
+        "liquid-number": 12356,
+        "liquid-radio": "option-2",
+        "liquid-range": 6,
+        "liquid-select": "Option 3",
+        "liquid-textarea": "This is a textarea for user to input something!!"
+      }
     }
   },
   "order": [
@@ -249,6 +261,7 @@
     "collage",
     "video",
     "multicolumn",
-    "liquid-practice"
+    "liquid-practice",
+    "165588215846629b62"
   ]
 }
