@@ -1,0 +1,73 @@
+{{ 'carousel.css' | asset_url | stylesheet_tag  }}
+
+<script src="{{ 'carousel.js' | asset_url }}" defer="defer"></script>
+
+{{ section.settings.image_picker | img_url }} <br>
+
+{%- comment -%}{%- endcomment -%}
+
+<div class="carousel">
+  <button class="carousel-button prev" data-carousel-button="'prev">&larr;</button>
+  <button class="carousel-button next" data-carousel-button="'next">&rarr;</button>
+  <ul class="carousel-slide">
+    <li class="carousel-image" data-active>
+      <img src="{{ section.settings.image_picker1 | img_url: "1300x" }}" alt="{{ section.settings.image_picker1.alt }}" />
+    </li>
+    <li class="carousel-image">
+      <img src="{{ section.settings.image_picker2 | img_url: "1300x" }}" alt="{{ section.settings.image_picker2.alt }}" />
+    </li>
+    <li class="carousel-image">
+      <img src="{{ section.settings.image_picker3 | img_url: "1300x" }}" alt="{{ section.settings.image_picker3.alt }}" />
+    </li>
+  </ul>
+</div>
+
+
+
+<!--{% assign image = images['IMAG2770.jpg'] %} <img src="{{ image | img_url }}" alt="{{ image.alt }}" /> -->
+
+
+
+
+<!-- <img src="{{  section.blocks.settings.image1 | image_url }}" alt="">
+<img src="{{  section.blocks.settings.image2 | image_url }}" alt="">
+<img src="{{  section.blocks.settings.image3 | image_url }}" alt=""> -->
+
+
+  
+<script>
+// console.log({{ image }}); console.log({{ section.settings.image_picker }});
+// console.log({{ images['files/IMAG2770.jpg'] | JSON }});</script>
+
+{% schema %}
+{
+  "name": "圖片幻燈片",
+  "tag": "section",
+  "settings": [
+    {
+      "id":"carousel_name",
+      "type": "text",
+      "label": "測試圖片幻燈片"
+    },
+    {
+      "id": "image_picker1",
+      "type": "image_picker",
+      "label": "選擇圖片1"
+    }, 
+    {
+      "id": "image_picker2",
+      "type": "image_picker",
+      "label": "選擇圖片2"
+    },
+    {
+      "id": "image_picker3",
+      "type": "image_picker",
+      "label": "選擇圖片3"
+    }
+  ],
+  "presets": [
+    {
+      "name":"Carousel"
+    }
+  ]
+} {% endschema %}

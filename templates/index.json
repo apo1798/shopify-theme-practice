@@ -1,7 +1,27 @@
 {
   "sections": {
+    "1655883772a5623106": {
+      "type": "apo-carousel",
+      "settings": {
+        "carousel_name": "",
+        "image_picker1": "shopify:\/\/shop_images\/IMAG3210.jpg",
+        "image_picker2": "shopify:\/\/shop_images\/IMAG2745.jpg",
+        "image_picker3": "shopify:\/\/shop_images\/IMAG2770.jpg"
+      }
+    },
     "16558006500888fefe": {
       "type": "test-practice",
+      "blocks": {
+        "c939a7e6-b2e1-4cb1-a2f9-712f4d4a17c8": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMAG3210.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "c939a7e6-b2e1-4cb1-a2f9-712f4d4a17c8"
+      ],
       "settings": {
         "test_notice": "Default Notice",
         "show_star": true,
@@ -223,6 +243,7 @@
     }
   },
   "order": [
+    "1655883772a5623106",
     "16558006500888fefe",
     "image_banner",
     "rich_text",
