@@ -1,6 +1,7 @@
 {
   "sections": {
     "1655892525c252138b": {
+    "1655883772a5623106": {
       "type": "apo-carousel",
       "settings": {
         "carousel_name": "",
@@ -25,10 +26,23 @@
       ],
       "settings": {
         "include_margins": false
+        "image_picker2": "shopify:\/\/shop_images\/IMAG2745.jpg",
+        "image_picker3": "shopify:\/\/shop_images\/IMAG2770.jpg"
       }
     },
     "16558006500888fefe": {
       "type": "test-practice",
+      "blocks": {
+        "c939a7e6-b2e1-4cb1-a2f9-712f4d4a17c8": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMAG3210.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "c939a7e6-b2e1-4cb1-a2f9-712f4d4a17c8"
+      ],
       "settings": {
         "test_notice": "Default Notice",
         "show_star": true,
@@ -264,6 +278,7 @@
   "order": [
     "1655892525c252138b",
     "165586395565446ad0",
+    "1655883772a5623106",
     "16558006500888fefe",
     "image_banner",
     "rich_text",
