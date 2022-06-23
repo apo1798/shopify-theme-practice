@@ -1,17 +1,137 @@
 {
   "sections": {
     "1655892525c252138b": {
-    "1655883772a5623106": {
       "type": "apo-carousel",
       "settings": {
         "carousel_name": "",
-        "image_picker1": "shopify:\/\/shop_images\/IMAG3210.jpg",
-        "image_picker2": "shopify:\/\/shop_images\/IMAG2770.jpg",
-        "image_picker3": "shopify:\/\/shop_images\/IMAG2745.jpg"
+        "image_picker1": "shopify:\/\/shop_images\/0623-BN-02-1536x504.jpg",
+        "link1": "https:\/\/reurl.cc\/e3nnyL",
+        "image_picker2": "shopify:\/\/shop_images\/0527BN__-1-1536x504.jpg",
+        "link2": "https:\/\/reurl.cc\/e3nnGL",
+        "image_picker3": "shopify:\/\/shop_images\/1-1-1024x336.jpg",
+        "link3": "https:\/\/reurl.cc\/WryyO7",
+        "image_picker4": "shopify:\/\/shop_images\/Caviar-HousePrunier_Banner-scaled.jpg",
+        "link4": "https:\/\/reurl.cc\/rDooXN",
+        "image_picker5": "shopify:\/\/shop_images\/Liz_-4-scaled.jpg",
+        "link5": "https:\/\/reurl.cc\/q5oo33",
+        "image_picker6": "shopify:\/\/shop_images\/home_s5.jpg",
+        "link6": "https:\/\/reurl.cc\/YvGGpX"
+      }
+    },
+    "1655973375a1da90c6": {
+      "type": "slideshow",
+      "blocks": {
+        "165597337519e1ed99-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0623-BN-02-1536x504.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "連結",
+            "link": "http:\/\/tasterselection.com\/",
+            "button_style_secondary": false,
+            "box_align": "bottom-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "165597337519e1ed99-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0527BN__-1-1536x504.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "連結",
+            "link": "http:\/\/tasterselection.com\/",
+            "button_style_secondary": true,
+            "box_align": "bottom-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "4d3999c9-202f-4051-a169-b34b0701a1b7": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1-1-1024x336.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "連結",
+            "link": "http:\/\/tasterselection.com\/",
+            "button_style_secondary": true,
+            "box_align": "bottom-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "ae948148-1d88-46cd-815c-d91e4cc19ec8": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Caviar-HousePrunier_Banner-scaled.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "連結",
+            "link": "http:\/\/tasterselection.com\/",
+            "button_style_secondary": false,
+            "box_align": "bottom-right",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "1f96e70d-0fd0-44cf-a771-3829901eb3fc": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Liz_-4-scaled.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "連結",
+            "link": "http:\/\/tasterselection.com\/",
+            "button_style_secondary": false,
+            "box_align": "top-left",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "165597337519e1ed99-0",
+        "165597337519e1ed99-1",
+        "4d3999c9-202f-4051-a169-b34b0701a1b7",
+        "ae948148-1d88-46cd-815c-d91e4cc19ec8",
+        "1f96e70d-0fd0-44cf-a771-3829901eb3fc"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
       }
     },
     "165586395565446ad0": {
       "type": "apps",
+      "disabled": true,
       "blocks": {
         "6cf80b4b-2cce-468d-87cb-fdf6ce7b96c2": {
           "type": "shopify:\/\/apps\/image-slider-ea\/blocks\/embed-code\/187cfdb3-f7ca-4af8-9477-517eb71154e7",
@@ -26,75 +146,16 @@
       ],
       "settings": {
         "include_margins": false
-        "image_picker2": "shopify:\/\/shop_images\/IMAG2745.jpg",
-        "image_picker3": "shopify:\/\/shop_images\/IMAG2770.jpg"
       }
     },
     "16558006500888fefe": {
       "type": "test-practice",
-      "blocks": {
-        "c939a7e6-b2e1-4cb1-a2f9-712f4d4a17c8": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/IMAG3210.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "c939a7e6-b2e1-4cb1-a2f9-712f4d4a17c8"
-      ],
+      "disabled": true,
       "settings": {
         "test_notice": "Default Notice",
         "show_star": true,
         "article": "",
         "font_color": "#ff9191"
-      }
-    },
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "阿成文具行",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "創立於1990年，堅持台灣生產，致力於提供台灣的優質、具有文化感的文具",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "逛逛商店",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-        "image_overlay_opacity": 60,
-        "image_height": "medium",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-2",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": false
       }
     },
     "rich_text": {
@@ -190,8 +251,56 @@
         "padding_bottom": 36
       }
     },
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "美食加",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "創立於1990年，堅持台灣生產，致力於提供台灣的優質、具有文化感的文具",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "逛逛商店",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image_overlay_opacity": 60,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
     "video": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "",
         "heading_size": "h1",
@@ -258,12 +367,14 @@
     },
     "liquid-practice": {
       "type": "practice-object",
+      "disabled": true,
       "settings": {
         "liq-obj": ""
       }
     },
     "165588215846629b62": {
       "type": "liquid-practice",
+      "disabled": true,
       "settings": {
         "liquid-practice": "123",
         "liquid-checkbox": false,
@@ -277,13 +388,13 @@
   },
   "order": [
     "1655892525c252138b",
+    "1655973375a1da90c6",
     "165586395565446ad0",
-    "1655883772a5623106",
     "16558006500888fefe",
-    "image_banner",
     "rich_text",
     "featured_collection",
     "collage",
+    "image_banner",
     "video",
     "multicolumn",
     "liquid-practice",

@@ -9,7 +9,7 @@
     "colors_outline_button_labels": "#121212",
     "colors_background_1": "#ffffff",
     "gradient_background_1": "",
-    "colors_background_2": "#f3f3f3",
+    "colors_background_2": "#fefaf5",
     "gradient_background_2": "",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
@@ -38,7 +38,7 @@
     "inputs_radius": 0,
     "inputs_shadow_opacity": 0,
     "inputs_shadow_horizontal_offset": 0,
-    "inputs_shadow_vertical_offset": 4,
+    "inputs_shadow_vertical_offset": 6,
     "inputs_shadow_blur": 5,
     "card_style": "standard",
     "card_image_padding": 0,
@@ -120,8 +120,8 @@
         "type": "header",
         "settings": {
           "color_scheme": "background-1",
-          "logo": "shopify:\/\/shop_images\/pen-nib.png",
-          "logo_width": 50,
+          "logo": "shopify:\/\/shop_images\/logox280.png",
+          "logo_width": 70,
           "logo_position": "middle-left",
           "menu": "main-menu",
           "menu_type_desktop": "dropdown",
@@ -135,35 +135,53 @@
         "blocks": {
           "footer-0": {
             "type": "link_list",
+            "disabled": true,
             "settings": {
-              "heading": "網站連結",
+              "heading": "聯絡我們",
               "menu": "footer"
             }
           },
           "footer-1": {
             "type": "link_list",
+            "disabled": true,
             "settings": {
               "heading": "搜尋商品",
               "menu": "footer"
             }
           },
+          "67578469-6ac2-46e6-a99c-b6554c41747b": {
+            "type": "text",
+            "settings": {
+              "heading": "聯絡我們",
+              "subtext": "<p>時間\/週一至週五 10:00-17:00<\/p><p>客服信箱\/<a href=\"mailto:service@taster.life\">service@taster.life<\/a><\/p><p>電話\/02-23660699 #0002<\/p>"
+            }
+          },
+          "59a3d577-d4b6-4bef-92e6-c714b553d16a": {
+            "type": "text",
+            "settings": {
+              "heading": "顧客服務",
+              "subtext": "<p><a href=\"https:\/\/www.tasterselection.com\/delivery\/\" target=\"_self\">運送服務方式<\/a><\/p><p><a href=\"https:\/\/www.tasterselection.com\/payment\/\" target=\"_self\">付款服務方式<\/a><\/p><p><a href=\"https:\/\/www.tasterselection.com\/policy\/\" target=\"_self\">退換貨政策<\/a><\/p>"
+            }
+          },
           "footer-2": {
             "type": "text",
             "settings": {
-              "heading": "給您最好的品質",
-              "subtext": "<p>三十年傳承，品質不敢不怠。全台<a href='https:\/\/google.com' target='_blank' rel='noreferrer noopener'>三間據點<\/a>，歡迎您親自來訪。<\/p>"
+              "heading": "追蹤我們 ",
+              "subtext": "<p><a href=\"https:\/\/www.facebook.com\/groups\/1422637727923039\/\" target=\"_blank\">追蹤美食加口袋名單社團<\/a><\/p><p><a href=\"https:\/\/www.instagram.com\/taster__selection\/\" target=\"_blank\">追蹤最新美食動態<\/a><\/p>"
             }
           }
         },
         "block_order": [
           "footer-0",
           "footer-1",
+          "67578469-6ac2-46e6-a99c-b6554c41747b",
+          "59a3d577-d4b6-4bef-92e6-c714b553d16a",
           "footer-2"
         ],
         "settings": {
-          "color_scheme": "background-1",
+          "color_scheme": "background-2",
           "newsletter_enable": true,
-          "newsletter_heading": "Subscribe to our emails",
+          "newsletter_heading": "訂閱美食加",
           "show_social": true,
           "enable_country_selector": false,
           "enable_language_selector": false,

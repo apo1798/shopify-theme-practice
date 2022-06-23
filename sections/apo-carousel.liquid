@@ -2,24 +2,65 @@
 
 <script src="{{ 'carousel.js' | asset_url }}" defer="defer"></script>
 
-{{ section.settings.image_picker | img_url }} <br>
+<!-- {{ section.settings.image_picker | img_url }} <br> -->
 
 {%- comment -%}{%- endcomment -%}
 
 <div class="carousel">
-  <button class="carousel-button prev" data-carousel-button="'prev">&larr;</button>
-  <button class="carousel-button next" data-carousel-button="'next">&rarr;</button>
-  <ul class="carousel-slide">
-    <li class="carousel-image" data-active>
-      <img src="{{ section.settings.image_picker1 | img_url: "1300x" }}" alt="{{ section.settings.image_picker1.alt }}" />
-    </li>
-    <li class="carousel-image">
-      <img src="{{ section.settings.image_picker2 | img_url: "1300x" }}" alt="{{ section.settings.image_picker2.alt }}" />
-    </li>
-    <li class="carousel-image">
-      <img src="{{ section.settings.image_picker3 | img_url: "1300x" }}" alt="{{ section.settings.image_picker3.alt }}" />
-    </li>
-  </ul>
+  <button class="carousel-button prev" ><</button>
+  <button class="carousel-button next" >></button>
+    <div class="carousel-slide">
+      
+      {% if section.settings.image_picker1 %}
+        <div class="carousel-image">
+          <a href="{{ section.settings.link1 }}" target="_blank" rel="noopener noreferrer">
+            <img src="{{ section.settings.image_picker1 | img_url: "master" }}" alt="{{ section.settings.image_picker1.alt }}" />
+          </a>
+        </div>
+      {% endif %}
+    
+      {% if section.settings.image_picker2 %}
+        <div class="carousel-image">
+          <a href="{{ section.settings.link2 }}" target="_blank" rel="noopener noreferrer">
+            <img src="{{ section.settings.image_picker2 | img_url: "master" }}" alt="{{ section.settings.image_picker2.alt }}" />
+          </a>
+        </div>
+      {% endif %}
+
+      {% if section.settings.image_picker3 %}
+        <div class="carousel-image">
+          <a href="{{ section.settings.link3 }}" target="_blank" rel="noopener noreferrer">
+            <img src="{{ section.settings.image_picker3 | img_url: "master" }}" alt="{{ section.settings.image_picker3.alt }}" />
+          </a>
+        </div>
+      {% endif %}
+
+      {% if section.settings.image_picker4 %}
+        <div class="carousel-image">
+          <a href="{{ section.settings.link4 }}" target="_blank" rel="noopener noreferrer">
+            <img src="{{ section.settings.image_picker4 | img_url: "master" }}" alt="{{ section.settings.image_picker4.alt }}" />
+          </a>
+        </div>
+      {% endif %}
+
+      {% if section.settings.image_picker5 %}
+        <div class="carousel-image">
+          <a href="{{ section.settings.link5 }}" target="_blank" rel="noopener noreferrer">
+            <img src="{{ section.settings.image_picker5 | img_url: "master" }}" alt="{{ section.settings.image_picker5.alt }}" />
+          </a>
+        </div>
+      {% endif %}
+
+      {% if section.settings.image_picker6 %}
+        <div class="carousel-image">
+          <a href="{{ section.settings.link6 }}" target="_blank" rel="noopener noreferrer">
+            <img src="{{ section.settings.image_picker6 | img_url: "master" }}" alt="{{ section.settings.image_picker6.alt }}" />
+          </a>
+        </div>
+      {% endif %}
+
+    </div>
+  <div class="dot-container"></div>
 </div>
 
 
@@ -53,16 +94,67 @@
       "id": "image_picker1",
       "type": "image_picker",
       "label": "選擇圖片1"
-    }, 
+    },
+    {
+      "id": "link1",
+      "type": "text",
+      "label": "圖片1連結",
+      "default": "https://www.tasterselection.com"
+    },
     {
       "id": "image_picker2",
       "type": "image_picker",
       "label": "選擇圖片2"
     },
     {
+      "id": "link2",
+      "type": "text",
+      "label": "圖片2連結",
+      "default": "https://www.tasterselection.com"
+    },
+    {
       "id": "image_picker3",
       "type": "image_picker",
       "label": "選擇圖片3"
+    },
+    {
+      "id": "link3",
+      "type": "text",
+      "label": "圖片3連結",
+      "default": "https://www.tasterselection.com"
+    },
+    {
+      "id": "image_picker4",
+      "type": "image_picker",
+      "label": "選擇圖片4"
+    },
+    {
+      "id": "link4",
+      "type": "text",
+      "label": "圖片4連結",
+      "default": "https://www.tasterselection.com"
+    },
+    {
+      "id": "image_picker5",
+      "type": "image_picker",
+      "label": "選擇圖片5"
+    },
+    {
+      "id": "link5",
+      "type": "text",
+      "label": "圖片5連結",
+      "default": "https://www.tasterselection.com"
+    },
+    {
+      "id": "image_picker6",
+      "type": "image_picker",
+      "label": "選擇圖片6"
+    },
+    {
+      "id": "link6",
+      "type": "text",
+      "label": "圖片6連結",
+      "default": "https://www.tasterselection.com"
     }
   ],
   "presets": [

@@ -1,21 +1,37 @@
+$transparent-white: rgba(255, 255, 255, 1);
+$dot-gray: rgba(255, 255, 255, 0.5);
+$tranparent-black: rgba(0, 0, 0, 0.4);
+$dot-gray-active: rgba(255, 255, 255, 1);
+
+// 確保左右按鍵、下方點點都在推片上面
+// Left, right buttons + dotContainer -> z-index:10;
+// iamge on display: z-index:5;
+
 .carousel {
   margin: 0 auto;
-  max-width: 1280px;
-  background-color: gold;
+  height: calc(100vw * 0.328);
+  // 原圖是1536 * 504，不太好的寫法......
+  max-width: 100vw;
   position: relative;
+  z-index: 0;
 
+  // all button with this class should be pointer
+  button {
+    cursor: pointer;
+  }
+
+  // Carousel prev, next button style
   &-button {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.1);
-    border: none;
-    border-radius: 1rem;
+    border: 2px solid $transparent-white;
+    border-radius: 50%;
     font-size: 3rem;
     z-index: 10;
     top: 50%;
     transform: translateY((-50%));
-    color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    padding: 0.5rem;
+    color: $transparent-white;
+    padding: 0.2rem 1rem;
 
     &:hover,
     &:focus {
@@ -23,8 +39,9 @@
       background-color: rgba(0, 0, 0, 0.4);
     }
 
-    &:focus {
-      outline: 1px solid white;
+    &:focus,
+    &:focus-visible {
+      border: 2px solid $dot-gray-active;
     }
 
     &.prev {
@@ -36,11 +53,7 @@
     }
   }
 
-  // Not to let the carousel without any content (bad practice BUG
-  &-image:nth-child(1) {
-    position: relative;
-  }
-
+  // 幻燈片上的圖片
   &-image {
     position: absolute;
     top: 0;
@@ -48,22 +61,55 @@
     opacity: 0;
     transition: 200ms opacity ease-in-out;
     transition-delay: 200ms;
+    width: 100%;
 
-    &[data-active] {
+    &.active-slide {
       transition-delay: 0ms;
       z-index: 5;
       opacity: 1;
     }
 
     img {
-      max-width: 100%;
+      width: 100%;
       object-fit: cover;
       object-position: center;
     }
   }
 
+  // Dot, dot container style
+  .dot-container {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+
+    a {
+      display: inline-block;
+    }
+
+    button {
+      width: 1.5rem;
+      height: 1.5rem;
+      border: none;
+      background-color: $dot-gray;
+      border-radius: 50%;
+
+      transition: all 0.3s ease-in-out;
+
+      &:not(:first-child) {
+        margin-left: 2rem;
+      }
+
+      &.active-dot {
+        background-color: $dot-gray-active;
+      }
+    }
+  }
+
   // Delete all default style of unordered list
-  ul {
+  ul,
+  li {
     margin: 0;
     padding: 0;
     list-style: none;
