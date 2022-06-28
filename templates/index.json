@@ -377,20 +377,22 @@
     "1656382515150a1e78": {
       "type": "multicolumn",
       "blocks": {
-        "165638251505482231-0": {
+        "165638251505482231-1": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/1024x683_22067218-70fb-4584-b4fc-b8de486458f2.png",
+            "title": "精選中、西早午餐選擇，開啟一天的美味序曲！",
+            "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "165638251505482231-1": {
+        "165638251505482231-0": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/1024x683_60c97988-7f11-4e01-9976-00bd638d3afe.png",
+            "title": "疫情之下，有備無患。吃得簡單，也要吃得講究。",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -398,34 +400,36 @@
         "165638251505482231-2": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/1024x683_3552f6ad-814c-4e77-adb8-f9c0c7790bb9.png",
+            "title": "看看大家都買了什麼？ 最夯的人氣商品都在這！",
+            "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "bc70b538-d6a8-4837-8579-57f1fca5ee6c": {
+        "e00ce370-f0b2-4ff9-bc23-84aa12be4f36": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/1024x683.png",
+            "title": "限時一週販售的預購商品，想吃美食下手要快！",
+            "text": "<p><\/p><p><\/p>",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "165638251505482231-0",
         "165638251505482231-1",
+        "165638251505482231-0",
         "165638251505482231-2",
-        "bc70b538-d6a8-4837-8579-57f1fca5ee6c"
+        "e00ce370-f0b2-4ff9-bc23-84aa12be4f36"
       ],
       "settings": {
         "title": "Multicolumn",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
+        "columns_desktop": 2,
         "column_alignment": "left",
         "background_style": "primary",
         "button_label": "Button label",
