@@ -36,9 +36,74 @@
       ],
       "settings": {
       }
+    },
+    "165638497196f76135": {
+      "type": "featured-product",
+      "blocks": {
+        "16563849712d752c10-1": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "16563849712d752c10-2": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "16563849712d752c10-3": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "16563849712d752c10-4": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "16563849712d752c10-5": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "16563849712d752c10-6": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "16563849712d752c10-7": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "16563849712d752c10-1",
+        "16563849712d752c10-2",
+        "16563849712d752c10-3",
+        "16563849712d752c10-4",
+        "16563849712d752c10-5",
+        "16563849712d752c10-6",
+        "16563849712d752c10-7"
+      ],
+      "settings": {
+        "product": "紙膠帶-多彩",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "165638497196f76135"
   ]
 }
