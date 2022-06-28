@@ -18,6 +18,73 @@
         "link6": "https:\/\/reurl.cc\/YvGGpX"
       }
     },
+    "1656382515150a1e78": {
+      "type": "multicolumn",
+      "blocks": {
+        "165638251505482231-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1024x683_22067218-70fb-4584-b4fc-b8de486458f2.png",
+            "title": "精選中、西早午餐選擇，開啟一天的美味序曲！",
+            "text": "",
+            "link_label": "",
+            "link": "https:\/\/bit.ly\/3xIHstQ"
+          }
+        },
+        "165638251505482231-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1024x683_60c97988-7f11-4e01-9976-00bd638d3afe.png",
+            "title": "疫情之下，有備無患。吃得簡單，也要吃得講究。",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "165638251505482231-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1024x683_3552f6ad-814c-4e77-adb8-f9c0c7790bb9.png",
+            "title": "看看大家都買了什麼？ 最夯的人氣商品都在這！",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "e00ce370-f0b2-4ff9-bc23-84aa12be4f36": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1024x683.png",
+            "title": "限時一週販售的預購商品，想吃美食下手要快！",
+            "text": "<p><\/p><p><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "165638251505482231-1",
+        "165638251505482231-0",
+        "165638251505482231-2",
+        "e00ce370-f0b2-4ff9-bc23-84aa12be4f36"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "1655973375a1da90c6": {
       "type": "slideshow",
       "disabled": true,
@@ -149,6 +216,7 @@
     },
     "rich_text": {
       "type": "rich-text",
+      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
@@ -177,6 +245,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "本月暢銷排行",
         "heading_size": "h2",
@@ -204,6 +273,7 @@
     },
     "collage": {
       "type": "collage",
+      "disabled": true,
       "blocks": {
         "collection-0": {
           "type": "collection",
@@ -242,6 +312,7 @@
     },
     "image_banner": {
       "type": "image-banner",
+      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
@@ -303,6 +374,7 @@
     },
     "multicolumn": {
       "type": "multicolumn",
+      "disabled": true,
       "blocks": {
         "column1": {
           "type": "column",
@@ -373,77 +445,11 @@
         "liquid-select": "Option 3",
         "liquid-textarea": "This is a textarea for user to input something!!"
       }
-    },
-    "1656382515150a1e78": {
-      "type": "multicolumn",
-      "blocks": {
-        "165638251505482231-1": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/1024x683_22067218-70fb-4584-b4fc-b8de486458f2.png",
-            "title": "精選中、西早午餐選擇，開啟一天的美味序曲！",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "165638251505482231-0": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/1024x683_60c97988-7f11-4e01-9976-00bd638d3afe.png",
-            "title": "疫情之下，有備無患。吃得簡單，也要吃得講究。",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "165638251505482231-2": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/1024x683_3552f6ad-814c-4e77-adb8-f9c0c7790bb9.png",
-            "title": "看看大家都買了什麼？ 最夯的人氣商品都在這！",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "e00ce370-f0b2-4ff9-bc23-84aa12be4f36": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/1024x683.png",
-            "title": "限時一週販售的預購商品，想吃美食下手要快！",
-            "text": "<p><\/p><p><\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "165638251505482231-1",
-        "165638251505482231-0",
-        "165638251505482231-2",
-        "e00ce370-f0b2-4ff9-bc23-84aa12be4f36"
-      ],
-      "settings": {
-        "title": "Multicolumn",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "Button label",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "1655892525c252138b",
+    "1656382515150a1e78",
     "1655973375a1da90c6",
     "165586395565446ad0",
     "16558006500888fefe",
@@ -454,7 +460,6 @@
     "video",
     "multicolumn",
     "liquid-practice",
-    "165588215846629b62",
-    "1656382515150a1e78"
+    "165588215846629b62"
   ]
 }
