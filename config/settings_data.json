@@ -38,7 +38,7 @@
     "inputs_radius": 0,
     "inputs_shadow_opacity": 0,
     "inputs_shadow_horizontal_offset": 0,
-    "inputs_shadow_vertical_offset": 6,
+    "inputs_shadow_vertical_offset": 0,
     "inputs_shadow_blur": 5,
     "card_style": "standard",
     "card_image_padding": 0,
@@ -125,7 +125,7 @@
           "logo_position": "middle-left",
           "menu": "main-menu",
           "menu_type_desktop": "dropdown",
-          "show_line_separator": true,
+          "show_line_separator": false,
           "enable_sticky_header": true,
           "margin_bottom": 0
         }
