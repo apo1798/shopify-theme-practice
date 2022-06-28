@@ -1,10 +1,10 @@
-{{ 'carousel.css' | asset_url | stylesheet_tag  }}
+{{ 'carousel.css' | asset_url | stylesheet_tag }}
 
 <script src="{{ 'carousel.js' | asset_url }}" defer="defer"></script>
 
-<!-- {{ section.settings.image_picker | img_url }} <br> -->
+<!-- {{ section.settings.image_picker | image_url }} <br> -->
 
-{%- comment -%}{%- endcomment -%}
+{%- comment -%} image_url 最多支援到5760px {%- endcomment -%}
 
 <div class="carousel">
   <button class="carousel-button prev" ><</button>
@@ -14,7 +14,7 @@
       {% if section.settings.image_picker1 %}
         <div class="carousel-image">
           <a href="{{ section.settings.link1 }}" target="_blank" rel="noopener noreferrer">
-            <img src="{{ section.settings.image_picker1 | img_url: "master" }}" alt="{{ section.settings.image_picker1.alt }}" />
+            <img src="{{ section.settings.image_picker1 | image_url: width: 5760 }}" alt="{{ section.settings.image_picker1.alt }}" loading='lazy' />
           </a>
         </div>
       {% endif %}
@@ -22,7 +22,7 @@
       {% if section.settings.image_picker2 %}
         <div class="carousel-image">
           <a href="{{ section.settings.link2 }}" target="_blank" rel="noopener noreferrer">
-            <img src="{{ section.settings.image_picker2 | img_url: "master" }}" alt="{{ section.settings.image_picker2.alt }}" />
+            <img src="{{ section.settings.image_picker2 | image_url: width: 5760 }}" alt="{{ section.settings.image_picker2.alt }}" loading='lazy' />
           </a>
         </div>
       {% endif %}
@@ -30,7 +30,7 @@
       {% if section.settings.image_picker3 %}
         <div class="carousel-image">
           <a href="{{ section.settings.link3 }}" target="_blank" rel="noopener noreferrer">
-            <img src="{{ section.settings.image_picker3 | img_url: "master" }}" alt="{{ section.settings.image_picker3.alt }}" />
+            <img src="{{ section.settings.image_picker3 | image_url: width: 5760 }}" alt="{{ section.settings.image_picker3.alt }}" loading='lazy' />
           </a>
         </div>
       {% endif %}
@@ -38,7 +38,7 @@
       {% if section.settings.image_picker4 %}
         <div class="carousel-image">
           <a href="{{ section.settings.link4 }}" target="_blank" rel="noopener noreferrer">
-            <img src="{{ section.settings.image_picker4 | img_url: "master" }}" alt="{{ section.settings.image_picker4.alt }}" />
+            <img src="{{ section.settings.image_picker4 | image_url: width: 5760 }}" alt="{{ section.settings.image_picker4.alt }}" loading='lazy' />
           </a>
         </div>
       {% endif %}
@@ -46,7 +46,7 @@
       {% if section.settings.image_picker5 %}
         <div class="carousel-image">
           <a href="{{ section.settings.link5 }}" target="_blank" rel="noopener noreferrer">
-            <img src="{{ section.settings.image_picker5 | img_url: "master" }}" alt="{{ section.settings.image_picker5.alt }}" />
+            <img src="{{ section.settings.image_picker5 | image_url: width: 5760 }}" alt="{{ section.settings.image_picker5.alt }}" loading='lazy' />
           </a>
         </div>
       {% endif %}
@@ -54,7 +54,7 @@
       {% if section.settings.image_picker6 %}
         <div class="carousel-image">
           <a href="{{ section.settings.link6 }}" target="_blank" rel="noopener noreferrer">
-            <img src="{{ section.settings.image_picker6 | img_url: "master" }}" alt="{{ section.settings.image_picker6.alt }}" />
+            <img src="{{ section.settings.image_picker6 | image_url: width: 5760 }}" alt="{{ section.settings.image_picker6.alt }}" loading='lazy' />
           </a>
         </div>
       {% endif %}
@@ -65,20 +65,20 @@
 
 
 
-<!--{% assign image = images['IMAG2770.jpg'] %} <img src="{{ image | img_url }}" alt="{{ image.alt }}" /> -->
+<!--{% assign image = images['IMAG2770.jpg'] %} <img src="{{ image | image_url }}" alt="{{ image.alt }}" /> -->
 
 
 
 
-<!-- <img src="{{  section.blocks.settings.image1 | image_url }}" alt="">
-<img src="{{  section.blocks.settings.image2 | image_url }}" alt="">
-<img src="{{  section.blocks.settings.image3 | image_url }}" alt=""> -->
+<!-- <img src="{{ section.blocks.settings.image1 | image_url }}" alt="">
+<img src="{{ section.blocks.settings.image2 | image_url }}" alt="">
+<img src="{{ section.blocks.settings.image3 | image_url }}" alt=""> -->
 
 
   
 <script>
-// console.log({{ image }}); console.log({{ section.settings.image_picker }});
-// console.log({{ images['files/IMAG2770.jpg'] | JSON }});</script>
+{% comment %} {{ images['files/IMAG2770.jpg'] | JSON }} {% endcomment %}
+</script>
 
 {% schema %}
 {
@@ -86,7 +86,7 @@
   "tag": "section",
   "settings": [
     {
-      "id":"carousel_name",
+      "id": "carousel_name",
       "type": "text",
       "label": "測試圖片幻燈片"
     },
@@ -159,7 +159,8 @@
   ],
   "presets": [
     {
-      "name":"圖片幻燈片"
+      "name": "圖片幻燈片"
     }
   ]
-} {% endschema %}
+}
+{% endschema %}

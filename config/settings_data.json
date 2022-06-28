@@ -121,7 +121,7 @@
         "settings": {
           "color_scheme": "background-1",
           "logo": "shopify:\/\/shop_images\/logox280.png",
-          "logo_width": 210,
+          "logo_width": 120,
           "logo_position": "middle-left",
           "menu": "main-menu",
           "menu_type_desktop": "dropdown",
@@ -140,11 +140,11 @@
               "subtext": "<p>時間 \/ 週一至週五 10:00-17:00<\/p><p>客服信箱 \/ <a href=\"mailto:service@taster.life\">service@taster.life<\/a><\/p><p>電話 \/ 02-23660699 #0002<\/p>"
             }
           },
-          "b83903fe-6e6b-4dc0-943c-cc6eeca96a6e": {
+          "c2d14b3e-80b6-489f-9d88-b99906f3c662": {
             "type": "text",
             "settings": {
-              "heading": "Heading",
-              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+              "heading": "顧客服務",
+              "subtext": "<p><a href=\"https:\/\/theme-practice-apo.myshopify.com\/pages\/%E9%81%8B%E9%80%81%E6%9C%8D%E5%8B%99%E6%96%B9%E5%BC%8F-1\" target=\"_blank\" title=\"https:\/\/theme-practice-apo.myshopify.com\/pages\/%E9%81%8B%E9%80%81%E6%9C%8D%E5%8B%99%E6%96%B9%E5%BC%8F-1\">運送服務方式<\/a><\/p><p><a href=\"https:\/\/theme-practice-apo.myshopify.com\/pages\/%E9%81%8B%E9%80%81%E6%9C%8D%E5%8B%99%E6%96%B9%E5%BC%8F\" target=\"_blank\" title=\"https:\/\/theme-practice-apo.myshopify.com\/pages\/%E9%81%8B%E9%80%81%E6%9C%8D%E5%8B%99%E6%96%B9%E5%BC%8F\">付款服務方式<\/a><\/p><p><a href=\"https:\/\/theme-practice-apo.myshopify.com\/pages\/%E9%80%80%E6%8F%9B%E8%B2%A8%E6%94%BF%E7%AD%96\" target=\"_blank\" title=\"https:\/\/theme-practice-apo.myshopify.com\/pages\/%E9%80%80%E6%8F%9B%E8%B2%A8%E6%94%BF%E7%AD%96\">退換貨政策<\/a><\/p>"
             }
           },
           "18de980b-f574-4660-93f2-814e598f7b25": {
@@ -159,7 +159,7 @@
         },
         "block_order": [
           "footer-1",
-          "b83903fe-6e6b-4dc0-943c-cc6eeca96a6e",
+          "c2d14b3e-80b6-489f-9d88-b99906f3c662",
           "18de980b-f574-4660-93f2-814e598f7b25"
         ],
         "settings": {
