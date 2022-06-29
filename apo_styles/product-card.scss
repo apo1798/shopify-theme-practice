@@ -4,9 +4,11 @@ $product-price-color: #77a464;
 $mobile-card-width: 40rem;
 $screen-card-width: 23.5rem;
 
+$divider-style: 1px solid rgba(0, 0, 0, 0.1);
+
 .product-card-section {
   margin: 5rem auto;
-  background-color: rgb(223, 238, 242);
+  // background-color: rgb(223, 238, 242);
 
   h4 {
     margin: 0;
@@ -70,6 +72,10 @@ $screen-card-width: 23.5rem;
   .product-price {
     color: $product-price-color;
     font-weight: bold;
+  }
+
+  .product-card-divider {
+    border-bottom: $divider-style;
   }
 }
 

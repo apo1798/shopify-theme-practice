@@ -1,6 +1,5 @@
 .product-card-section {
   margin: 5rem auto;
-  background-color: rgb(223, 238, 242);
 }
 .product-card-section h4 {
   margin: 0;
@@ -53,6 +52,9 @@
 .product-card-section .product-price {
   color: #77a464;
   font-weight: bold;
+}
+.product-card-section .product-card-divider {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 990px) {

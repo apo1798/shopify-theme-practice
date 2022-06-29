@@ -6,15 +6,19 @@
 
 {{ 'product-card.css' | asset_url | stylesheet_tag }}
 
-{% if section.settings.show_star %}
-  <p>⭐️⭐️⭐️⭐️⭐️</p>
-{% endif %}
-
 {% if section.blocks %}
   <div class='product-card-section page-width'>
-    <h3>{{ section.settings.card_title }}</h3>
+    <div>
+      <h3>{{ section.settings.card_title }}</h3>
+      <p>{{ section.settings.card_text }}</p>
+    </div>
 
-    <ul class='product-card-container'>
+    <ul class='
+        product-card-container
+        {% if section.settings.show_divider %}
+            product-card-divider
+         {% endif %}
+      '>
       {% for block in section.blocks %}
         {% case block.type %}
           {% when 'product_card' %}
@@ -54,7 +58,7 @@
   </div>
 {% endif %}
 
-<p class='custom-color'>Its color can be controlled by the color picker.</p>
+{% comment %} <p class='custom-color'>Its color can be controlled by the color picker.</p> {% endcomment %}
 
 {% schema %}
 {
@@ -66,19 +70,20 @@
       "id": "card_title",
       "type": "text",
       "label": "商品卡片標題",
-      "default": "這是一組商品卡片",
-      "info": "加上標題敘述"
+      "default": "這是一組商品卡片區段",
+      "info": "加上區段標題"
     },
     {
-      "id": "show_star",
+      "id": "card_text",
+      "type": "richtext",
+      "label": "區段內容",
+      "info": "加上區段內容"
+    },
+    {
+      "id": "show_divider",
       "type": "checkbox",
-      "label": "Show review stars",
+      "label": "加上底部分隔線",
       "default": true
-    },
-    {
-      "type": "article",
-      "id": "article",
-      "label": "Article"
     },
     {
       "id": "font_color",
