@@ -221,7 +221,6 @@
       "blocks": {
         "83e51ce7-40d5-4ad9-bed3-dc4bcc070b39": {
           "type": "shopify:\/\/apps\/bundle-products-upsell\/blocks\/fbt-bundle\/0a9e67ff-0413-4374-921d-e70fb17c7dbc",
-          "disabled": true,
           "settings": {
           }
         },
@@ -229,11 +228,24 @@
           "type": "shopify:\/\/apps\/bundle-products-upsell\/blocks\/single-product-bundles\/0a9e67ff-0413-4374-921d-e70fb17c7dbc",
           "settings": {
           }
+        },
+        "e3b5b97d-7bdc-416d-bedb-72534614a2c5": {
+          "type": "shopify:\/\/apps\/bundle-products-upsell\/blocks\/specific-bundles\/0a9e67ff-0413-4374-921d-e70fb17c7dbc",
+          "settings": {
+            "bundle_ids": "2273"
+          }
+        },
+        "d41ab5e7-c8df-4fb8-9af5-940e2ce49aa5": {
+          "type": "shopify:\/\/apps\/bundle-products-upsell\/blocks\/single-quantity-bundle\/0a9e67ff-0413-4374-921d-e70fb17c7dbc",
+          "settings": {
+          }
         }
       },
       "block_order": [
         "83e51ce7-40d5-4ad9-bed3-dc4bcc070b39",
-        "1b6d02d7-a96f-4032-a52b-deb306acfc66"
+        "1b6d02d7-a96f-4032-a52b-deb306acfc66",
+        "e3b5b97d-7bdc-416d-bedb-72534614a2c5",
+        "d41ab5e7-c8df-4fb8-9af5-940e2ce49aa5"
       ],
       "settings": {
         "include_margins": true
