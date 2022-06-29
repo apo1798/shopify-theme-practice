@@ -95,7 +95,7 @@
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
-    "favicon": "shopify:\/\/shop_images\/pen-nib.png",
+    "favicon": "shopify:\/\/shop_images\/favicon.jpg",
     "currency_code_enabled": true,
     "sections": {
       "announcement-bar": {

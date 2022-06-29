@@ -72,6 +72,8 @@ $carousel-ratio: calc(504 / 1536);
     }
 
     img {
+      height: calc(100vw * $carousel-ratio);
+      max-width: 100vw;
       width: 100%;
       object-fit: cover;
       object-position: center;

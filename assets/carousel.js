@@ -83,10 +83,10 @@ const slider = () => {
   });
 
   // 這個開啟的話只要在頁面上按下左右鍵都會造成滑動（要考慮會不會影響）
-  document.addEventListener('keydown', (e) => {
-    e.key === 'ArrowLeft' && goPrevSlide();
-    e.key === 'ArrowRight' && goNextSlide();
-  });
+  // document.addEventListener('keydown', (e) => {
+  //   e.key === 'ArrowLeft' && goPrevSlide();
+  //   e.key === 'ArrowRight' && goNextSlide();
+  // });
 
   // Initialize the carousel
   const init = () => {

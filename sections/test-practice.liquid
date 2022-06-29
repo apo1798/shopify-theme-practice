@@ -1,52 +1,73 @@
-{{ 'section-gallery.css' | asset_url | stylesheet_tag }} {% style %}
-
-.custom-color {
-  color: {{section.settings.font_color}};
-}
-
+{% style %}
+  .custom-color {
+    color: {{ section.settings.font_color }};
+  }
 {% endstyle %}
 
-<div class="color-container">
-  <h2>Hello from the test-practice.liquid</h2>
-</div>
-
-<h4>{{  section.settings.test_notice  }}</h4>
+{{ 'product-card.css' | asset_url | stylesheet_tag }}
 
 {% if section.settings.show_star %}
   <p>⭐️⭐️⭐️⭐️⭐️</p>
 {% endif %}
 
-{% for block in section.blocks %}
-  {% case block.type %}
-    {% when 'slide' %}
-      <div class="slide" {{ block.shopify_attributes }}>
-        {{ block.settings.image | image_url: width: 300 | image_tag }}
-      </div>
-      ...
-  {% endcase %}
-{% endfor %}
+{% if section.blocks %}
+  <div class='product-card-section page-width'>
+    <h3>{{ section.settings.card_title }}</h3>
 
-{% assign articleName = section.settings.article %}
+    <ul class='product-card-container'>
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'product_card' %}
+            {% unless block.settings.product == blank %}
+              <li class='product-card'>
+                <a
+                  href='{{ block.settings.product.url }}'
+                  target='_blank'
+                  rel='noopenner noreferrer'
+                >
+                  <img
+                    class='product-image'
+                    src='{{ block.settings.product.images[0].src | img_url: 'medium' }}'
+                    loading='lazy'
+                  >
+                  <div class='product-choose'>選擇品項</div>
+                </a>
 
-<p class="custom-color">Its color can be controlled by the color picker.</p>
+                <a
+                  href='{{ block.settings.product.url }}'
+                  target='_blank'
+                  rel='noopenner noreferrer'
+                >
+                  <h4>{{ block.settings.product.title }}</h4>
+                  <h4 class='product-price'>
+                    {{ block.settings.product.price | money_without_trailing_zeros }}
+                  </h4>
+                </a>
+              </li>
+              <script>
+                console.log({{ block.settings.product.images | json }});
+              </script>
+            {% endunless %}
+        {% endcase %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
 
-{{ section.settings.article }} <!-- <script>
-  console.log({{ section.settings | json }});
-  console.log({{ articles[section.settings.article] | json }});
-  console.log({{ section.settings.font_color | json }});
-</script> --> {% schema %}
+<p class='custom-color'>Its color can be controlled by the color picker.</p>
+
+{% schema %}
 {
-  "name": "Name_in_the_name",
+  "name": "商品卡片",
   "tag": "section",
   "class": "custom-container",
-  "limit": 2,
-  "settings": [  
+  "settings": [
     {
-      "id": "test_notice",
-      "type":"text",
-      "label": "Test notice",
-      "default": "Default Notice",
-      "info": "An additional info"
+      "id": "card_title",
+      "type": "text",
+      "label": "商品卡片標題",
+      "default": "這是一組商品卡片",
+      "info": "加上標題敘述"
     },
     {
       "id": "show_star",
@@ -68,20 +89,21 @@
   ],
   "blocks": [
     {
-      "name": "Slide",
-      "type": "slide",
+      "name": "商品卡片",
+      "type": "product_card",
       "settings": [
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
+          "type": "product",
+          "id": "product",
+          "label": "選擇商品"
         }
       ]
     }
   ],
-  "presets":[
+  "presets": [
     {
-      "name" : "Name in the presets"
-    } 
+      "name": "商品卡片"
+    }
   ]
-} {% endschema %}
+}
+{% endschema %}

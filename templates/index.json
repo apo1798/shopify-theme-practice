@@ -18,6 +18,102 @@
         "link6": "https:\/\/reurl.cc\/YvGGpX"
       }
     },
+    "1656406469f3cf6e25": {
+      "type": "test-practice",
+      "blocks": {
+        "21418357-6243-4444-a34a-84140d7e04d1": {
+          "type": "product_card",
+          "settings": {
+            "product": "好ㄘ組合_我要吃到飽免運組_好評加開"
+          }
+        },
+        "b6b01401-c7ad-444e-9b91-5c4da640ea02": {
+          "type": "product_card",
+          "settings": {
+            "product": "烏骨雞湯_我要吃到飽免運組_好評加開"
+          }
+        },
+        "b78d2c5c-6f95-4a1a-a05b-93afd6b58c2c": {
+          "type": "product_card",
+          "settings": {
+            "product": "雞湯_我要吃到飽免運組_好評加開"
+          }
+        },
+        "e58f18f0-ccf6-4a6a-9353-624b09f490b2": {
+          "type": "product_card",
+          "settings": {
+            "product": "雞湯好ㄏ_我要吃到飽免運組_好評加開美食加選物"
+          }
+        },
+        "b40579b8-8623-453a-80b1-763e27f44bd9": {
+          "type": "product_card",
+          "settings": {
+            "product": "小三元-星級港點-自由選冷凍宅配_0624"
+          }
+        },
+        "6c1a1e1a-4945-4625-8a0d-0228349585f2": {
+          "type": "product_card",
+          "settings": {
+            "product": "小三元-經典暢銷蘿蔔糕_單品任選冷藏配送_0624"
+          }
+        },
+        "f2b5b3c8-82e8-40cb-a2ac-ec5653ba29e4": {
+          "type": "product_card",
+          "settings": {
+            "product": "小三元-嚴選星級港點免運組冷凍配送_0624"
+          }
+        },
+        "12281f61-fae6-41fa-950f-16d1c9464ff7": {
+          "type": "product_card",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "21418357-6243-4444-a34a-84140d7e04d1",
+        "b6b01401-c7ad-444e-9b91-5c4da640ea02",
+        "b78d2c5c-6f95-4a1a-a05b-93afd6b58c2c",
+        "e58f18f0-ccf6-4a6a-9353-624b09f490b2",
+        "b40579b8-8623-453a-80b1-763e27f44bd9",
+        "6c1a1e1a-4945-4625-8a0d-0228349585f2",
+        "f2b5b3c8-82e8-40cb-a2ac-ec5653ba29e4",
+        "12281f61-fae6-41fa-950f-16d1c9464ff7"
+      ],
+      "settings": {
+        "card_title": "特別促銷",
+        "show_star": false,
+        "article": "",
+        "font_color": "#000000"
+      }
+    },
+    "1656474104284ca0b8": {
+      "type": "test-practice",
+      "blocks": {
+        "45d53b7e-2c00-4012-bccf-531ee635d6df": {
+          "type": "product_card",
+          "settings": {
+            "product": "麵包林里_-我要吃到飽免運組_-好評加開"
+          }
+        },
+        "a9e2f4fa-482e-4ccc-9824-df22d99b324d": {
+          "type": "product_card",
+          "settings": {
+            "product": "麵包林里_-組合任選_-好評加開"
+          }
+        }
+      },
+      "block_order": [
+        "45d53b7e-2c00-4012-bccf-531ee635d6df",
+        "a9e2f4fa-482e-4ccc-9824-df22d99b324d"
+      ],
+      "settings": {
+        "card_title": "這是一組商品卡片",
+        "show_star": false,
+        "article": "",
+        "font_color": "#000000"
+      }
+    },
     "1656382515150a1e78": {
       "type": "multicolumn",
       "blocks": {
@@ -208,7 +304,7 @@
       "type": "test-practice",
       "disabled": true,
       "settings": {
-        "test_notice": "Default Notice",
+        "card_title": "這是一組商品卡片",
         "show_star": true,
         "article": "",
         "font_color": "#ff9191"
@@ -449,6 +545,8 @@
   },
   "order": [
     "1655892525c252138b",
+    "1656406469f3cf6e25",
+    "1656474104284ca0b8",
     "1656382515150a1e78",
     "1655973375a1da90c6",
     "165586395565446ad0",

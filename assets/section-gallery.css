@@ -1,8 +1,0 @@
-.color-container {
-  padding: 2rem;
-  background-color: rgb(78, 154, 128);
-}
-.color-container__inner {
-  display: flex;
-  flex-wrap: wrap;
-}
