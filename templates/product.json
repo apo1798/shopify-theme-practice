@@ -120,6 +120,7 @@
     },
     "image-with-text": {
       "type": "image-with-text",
+      "disabled": true,
       "blocks": {
         "image-with-text-0": {
           "type": "heading",
@@ -199,7 +200,6 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
-      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -215,42 +215,24 @@
         "padding_bottom": 28
       }
     },
-    "16564947779bc9bf88": {
+    "16564950749bcbb2a7": {
       "type": "apps",
       "blocks": {
-        "0f491ac8-7ae9-4839-8cd4-9df61bbcbdd9": {
+        "83e51ce7-40d5-4ad9-bed3-dc4bcc070b39": {
           "type": "shopify:\/\/apps\/bundle-products-upsell\/blocks\/fbt-bundle\/0a9e67ff-0413-4374-921d-e70fb17c7dbc",
+          "disabled": true,
           "settings": {
           }
         },
-        "b26fcfa1-c12b-4d52-81c3-754069093d34": {
-          "type": "shopify:\/\/apps\/bundle-products-upsell\/blocks\/product-variant-all-bundles\/0a9e67ff-0413-4374-921d-e70fb17c7dbc",
-          "settings": {
-          }
-        },
-        "495b888c-ce83-4fbf-b712-27155b17a150": {
-          "type": "shopify:\/\/apps\/bundle-products-upsell\/blocks\/specific-bundles\/0a9e67ff-0413-4374-921d-e70fb17c7dbc",
-          "settings": {
-            "bundle_ids": ""
-          }
-        },
-        "9bea1ffd-703e-4fc9-9798-f796337be45e": {
-          "type": "shopify:\/\/apps\/bundle-products-upsell\/blocks\/single-quantity-bundle\/0a9e67ff-0413-4374-921d-e70fb17c7dbc",
-          "settings": {
-          }
-        },
-        "9ab5ed00-dcc3-44c9-9a7c-35caca291bfc": {
+        "1b6d02d7-a96f-4032-a52b-deb306acfc66": {
           "type": "shopify:\/\/apps\/bundle-products-upsell\/blocks\/single-product-bundles\/0a9e67ff-0413-4374-921d-e70fb17c7dbc",
           "settings": {
           }
         }
       },
       "block_order": [
-        "0f491ac8-7ae9-4839-8cd4-9df61bbcbdd9",
-        "b26fcfa1-c12b-4d52-81c3-754069093d34",
-        "495b888c-ce83-4fbf-b712-27155b17a150",
-        "9bea1ffd-703e-4fc9-9798-f796337be45e",
-        "9ab5ed00-dcc3-44c9-9a7c-35caca291bfc"
+        "83e51ce7-40d5-4ad9-bed3-dc4bcc070b39",
+        "1b6d02d7-a96f-4032-a52b-deb306acfc66"
       ],
       "settings": {
         "include_margins": true
@@ -262,6 +244,6 @@
     "image-with-text",
     "multicolumn",
     "product-recommendations",
-    "16564947779bc9bf88"
+    "16564950749bcbb2a7"
   ]
 }
