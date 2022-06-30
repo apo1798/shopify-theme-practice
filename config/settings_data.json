@@ -97,6 +97,15 @@
     "predictive_search_show_price": false,
     "favicon": "shopify:\/\/shop_images\/favicon.jpg",
     "currency_code_enabled": true,
+    "checkout_header_image": "shopify:\/\/shop_images\/story_2-1536x683.jpg",
+    "checkout_logo_image": "shopify:\/\/shop_images\/logox280.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "small",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_color": "#ffe9e9",
+    "checkout_heading_font": "Roboto",
+    "checkout_body_font": "Source Sans Pro",
+    "checkout_accent_color": "#bf8200",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
