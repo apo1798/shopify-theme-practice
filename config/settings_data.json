@@ -106,6 +106,7 @@
     "checkout_heading_font": "Roboto",
     "checkout_body_font": "Source Sans Pro",
     "checkout_accent_color": "#bf8200",
+    "checkout_button_color": "#007fd4",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
