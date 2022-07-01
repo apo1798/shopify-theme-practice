@@ -1,5 +1,6 @@
 .product-card-section {
   margin: 5rem auto;
+  background-color: rgb(223, 238, 242);
 }
 .product-card-section h4 {
   margin: 0;
@@ -17,37 +18,50 @@
   text-decoration: none;
   color: inherit;
 }
-.product-card-section .product-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.product-card-section .product-card-container .product-image {
-  display: block;
-  max-width: 100%;
-  object-fit: cover;
-  height: 40rem;
-}
 .product-card-section .product-card-container .product-choose {
   position: relative;
   width: 100%;
-  height: 3.2rem;
-  margin-top: -3.2rem;
+  height: 3.5rem;
+  margin-top: -3.5rem;
   font-size: 1.6rem;
-  color: #fff;
+  color: rgb(255, 255, 255);
+  padding: 0.5rem 0;
   background-color: rgba(0, 0, 0, 0.7);
   text-align: center;
   opacity: 0;
   transition: opacity 300ms ease-in-out;
 }
 .product-card-section .product-card-container .product-card {
-  flex-basis: 40rem;
   color: #aba098;
   font-weight: bold;
   margin: 1rem 1.5rem;
 }
+.product-card-section .product-card-container .product-card .product-image-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.product-card-section .product-card-container .product-card .product-image-container::before {
+  content: "";
+  display: block;
+  margin-top: 100%;
+  background-color: #999;
+}
+.product-card-section .product-card-container .product-card .product-image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  transition: all 400ms ease;
+}
 .product-card-section .product-card-container li:hover .product-choose {
   opacity: 1;
+}
+.product-card-section .product-card-container li:hover .product-image-container img {
+  transform: scale(1.01);
 }
 .product-card-section .product-price {
   color: #77a464;
@@ -57,14 +71,15 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-@media (min-width: 990px) {
+@media (min-width: 560px) {
   .product-card-section .product-card-container {
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
-  .product-card-section .product-card-container .product-image {
-    height: 23.5rem;
-  }
-  .product-card-section .product-card-container .product-card {
-    flex-basis: 23.5rem;
+}
+@media (min-width: 860px) {
+  .product-card-section .product-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 }

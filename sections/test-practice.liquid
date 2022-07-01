@@ -24,33 +24,33 @@
           {% when 'product_card' %}
             {% unless block.settings.product == blank %}
               <li class='product-card'>
-                <a
-                  href='{{ block.settings.product.url }}'
-                  target='_blank'
-                  rel='noopenner noreferrer'
-                >
-                  <img
-                    class='product-image'
-                    src='{{ block.settings.product.images[0].src | img_url: 'medium' }}'
-                    loading='lazy'
+                <div class='product-image-container'>
+                  <a
+                    href='{{ block.settings.product.url }}'
+                    target='_blank'
+                    rel='noopenner noreferrer'
                   >
-                  <div class='product-choose'>選擇品項</div>
-                </a>
+                    <img
+                      src='{{ block.settings.product.images[0].src | img_url: 'medium' }}'
+                      loading='lazy'
+                    >
+                    <div class='product-choose'>選擇品項</div>
+                  </a>
+                </div>
 
-                <a
-                  href='{{ block.settings.product.url }}'
-                  target='_blank'
-                  rel='noopenner noreferrer'
-                >
-                  <h4>{{ block.settings.product.title }}</h4>
-                  <h4 class='product-price'>
-                    {{ block.settings.product.price | money_without_trailing_zeros }}
-                  </h4>
-                </a>
+                <div>
+                  <a
+                    href='{{ block.settings.product.url }}'
+                    target='_blank'
+                    rel='noopenner noreferrer'
+                  >
+                    <h4>{{ block.settings.product.title }}</h4>
+                    <h4 class='product-price'>
+                      {{ block.settings.product.price | money_without_trailing_zeros }}
+                    </h4>
+                  </a>
+                </div>
               </li>
-              <script>
-                console.log({{ block.settings.product.images | json }});
-              </script>
             {% endunless %}
         {% endcase %}
       {% endfor %}

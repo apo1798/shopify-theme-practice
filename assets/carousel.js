@@ -1,4 +1,4 @@
-// reference: https://www.youtube.com/watch?v=9HcxHDS2w1s
+const SLIDER_INTERVAL = 8000; //ms
 
 const slider = () => {
   const slide = document.querySelector('.carousel-slide');
@@ -64,7 +64,7 @@ const slider = () => {
     if (timer) return;
     timer = setInterval(() => {
       goNextSlide();
-    }, 5000);
+    }, SLIDER_INTERVAL);
   };
 
   const resetTimer = () => {
@@ -93,26 +93,32 @@ const slider = () => {
     createDots();
     assignActiveDot(0);
     assignActiveSlide(0);
-    sliderTimer();
+    // sliderTimer();
+
+    // const firstSliderImage = document
+    //   .querySelector('.carousel-image.active-slide')
+    //   .querySelector('img');
+    // console.log(firstSliderImage);
+
+    // firstSliderImage.onload = () => {
+    //   console.log('Listener is working!');
+    //   sliderTimer();
+    // };
+
+    window.addEventListener('load', () => {
+      // console.log('Window listener is working now...');
+      sliderTimer();
+    });
+
+    // firstSliderImage.addEventListener('load', () => {
+    //   console.log('123');
+    //   // 第一張圖片載入完成後才開始動
+    //   console.log(firstSliderImage);
+    //   sliderTimer();
+    // });
   };
 
   init();
 };
 
 slider();
-
-// buttons.forEach((button) => {
-//   button.addEventListener('click', () => {
-//     const offset = button.dataset.carouselButton === 'next' ? 1 : -1;
-//     const slides = button.closest('.carousel').querySelector('.carousel-slide');
-
-//     const activeSlide = slides.querySelector('[data-active]');
-//     let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-
-//     if (newIndex < 0) newIndex = slides.children.length - 1;
-//     if (newIndex >= slides.children.length) newIndex = 0;
-
-//     delete activeSlide.dataset.active;
-//     slides.children[newIndex].dataset.active = true;
-//   });
-// });

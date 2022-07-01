@@ -62,12 +62,6 @@
           "settings": {
             "product": "小三元-嚴選星級港點免運組冷凍配送_0624"
           }
-        },
-        "12281f61-fae6-41fa-950f-16d1c9464ff7": {
-          "type": "product_card",
-          "settings": {
-            "product": ""
-          }
         }
       },
       "block_order": [
@@ -77,13 +71,12 @@
         "e58f18f0-ccf6-4a6a-9353-624b09f490b2",
         "b40579b8-8623-453a-80b1-763e27f44bd9",
         "6c1a1e1a-4945-4625-8a0d-0228349585f2",
-        "f2b5b3c8-82e8-40cb-a2ac-ec5653ba29e4",
-        "12281f61-fae6-41fa-950f-16d1c9464ff7"
+        "f2b5b3c8-82e8-40cb-a2ac-ec5653ba29e4"
       ],
       "settings": {
         "card_title": "特別促銷",
-        "show_star": false,
-        "article": "",
+        "card_text": "",
+        "show_divider": true,
         "font_color": "#000000"
       }
     },
@@ -109,8 +102,8 @@
       ],
       "settings": {
         "card_title": "這是一組商品卡片",
-        "show_star": false,
-        "article": "",
+        "card_text": "",
+        "show_divider": true,
         "font_color": "#000000"
       }
     },
@@ -305,8 +298,8 @@
       "disabled": true,
       "settings": {
         "card_title": "這是一組商品卡片",
-        "show_star": true,
-        "article": "",
+        "card_text": "",
+        "show_divider": true,
         "font_color": "#ff9191"
       }
     },

@@ -1,7 +1,10 @@
+// reference: https://www.youtube.com/watch?v=9HcxHDS2w1s
+
 $transparent-white: rgba(255, 255, 255, 1);
 $dot-gray: rgba(255, 255, 255, 0.5);
 $tranparent-black: rgba(0, 0, 0, 0.4);
 $dot-gray-active: rgba(255, 255, 255, 1);
+$carousel-bg-color: #999;
 
 // 原圖是1536 * 504，不太好的寫法......
 $carousel-ratio: calc(504 / 1536);
@@ -16,6 +19,7 @@ $carousel-ratio: calc(504 / 1536);
   max-width: 100vw;
   position: relative;
   z-index: 0;
+  background-color: $carousel-bg-color;
 
   // all button with this class should be pointer
   button {
