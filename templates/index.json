@@ -1,21 +1,61 @@
 {
   "sections": {
-    "1655892525c252138b": {
+    "1656851857db40d224": {
       "type": "apo-carousel",
+      "blocks": {
+        "1a93509f-5755-4e21-9305-24dbf87dcc79": {
+          "type": "image_carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0623-BN-02-1536x504.jpg",
+            "url": "shopify:\/\/blogs\/品牌\/美食加-品牌故事"
+          }
+        },
+        "7ae4705a-5a83-488c-b1e2-a1d873e21951": {
+          "type": "image_carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0527BN__-1-1536x504.jpg",
+            "url": "https:\/\/google.com"
+          }
+        },
+        "eee9df49-c1fe-413f-b26a-e5973c348e2e": {
+          "type": "image_carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/scaled.jpg",
+            "url": "shopify:\/\/collections\/美食加選物"
+          }
+        },
+        "17012734-b084-4976-851e-03a482adce37": {
+          "type": "image_carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Caviar-HousePrunier_Banner-scaled.jpg",
+            "url": "shopify:\/\/pages\/美食限時購"
+          }
+        },
+        "99cc6dc5-5756-4b13-b421-7e1c1cd0aa79": {
+          "type": "image_carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Liz_-4-scaled.jpg",
+            "url": "shopify:\/\/blogs\/新聞"
+          }
+        },
+        "0bbebc8c-a144-44d2-b993-4a828eec20b8": {
+          "type": "image_carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/home_s5.jpg",
+            "url": "shopify:\/\/products\/小三元-星級港點-自由選冷凍宅配_0624"
+          }
+        }
+      },
+      "block_order": [
+        "1a93509f-5755-4e21-9305-24dbf87dcc79",
+        "7ae4705a-5a83-488c-b1e2-a1d873e21951",
+        "eee9df49-c1fe-413f-b26a-e5973c348e2e",
+        "17012734-b084-4976-851e-03a482adce37",
+        "99cc6dc5-5756-4b13-b421-7e1c1cd0aa79",
+        "0bbebc8c-a144-44d2-b993-4a828eec20b8"
+      ],
       "settings": {
-        "carousel_name": "",
-        "image_picker1": "shopify:\/\/shop_images\/0623-BN-02-1536x504.jpg",
-        "link1": "https:\/\/reurl.cc\/e3nnyL",
-        "image_picker2": "shopify:\/\/shop_images\/0527BN__-1-1536x504.jpg",
-        "link2": "https:\/\/reurl.cc\/e3nnGL",
-        "image_picker3": "shopify:\/\/shop_images\/1-1-1024x336.jpg",
-        "link3": "https:\/\/reurl.cc\/WryyO7",
-        "image_picker4": "shopify:\/\/shop_images\/Caviar-HousePrunier_Banner-scaled.jpg",
-        "link4": "https:\/\/reurl.cc\/rDooXN",
-        "image_picker5": "shopify:\/\/shop_images\/Liz_-4-scaled.jpg",
-        "link5": "https:\/\/reurl.cc\/q5oo33",
-        "image_picker6": "shopify:\/\/shop_images\/home_s5.jpg",
-        "link6": "https:\/\/reurl.cc\/YvGGpX"
+        "carousel_name": ""
       }
     },
     "1656406469f3cf6e25": {
@@ -537,7 +577,7 @@
     }
   },
   "order": [
-    "1655892525c252138b",
+    "1656851857db40d224",
     "1656406469f3cf6e25",
     "1656474104284ca0b8",
     "1656382515150a1e78",

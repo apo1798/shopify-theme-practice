@@ -1,4 +1,4 @@
-const SLIDER_INTERVAL = 8000; //ms
+const SLIDER_INTERVAL = 5000; //ms
 
 const slider = () => {
   const slide = document.querySelector('.carousel-slide');
@@ -15,7 +15,7 @@ const slider = () => {
     Array.from(slide.children).forEach((_, i) => {
       dotContainer.insertAdjacentHTML(
         'beforeend',
-        `<button class='dots__dot' data-slide='${i}'></button>`
+        `<button class='dots__dot' data-slide='${i}' aria-label='第${i}張圖片'></button>`
       );
     });
   };
