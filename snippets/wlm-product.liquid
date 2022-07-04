@@ -1,23 +1,9 @@
 {%- assign w_continue = 'no' -%}
-{% assign wlmHideItem_Product = false %}{% assign wlmLockedTags120669 = false %}
+{% assign wlmHideItem_Product = false %}{% assign wlmLockedTags120670 = false %}
 {% for tag in customer.tags %}
-{% if tag == '一等客戶' %}{% assign wlmLockedTags120669 = true %}{% endif %}
+{% if tag == '一等客戶' %}{% assign wlmLockedTags120670 = true %}{% endif %}
 {% endfor %}
 
-
-{% if wlm-product.collections %}
-
-                            {% for c in wlm-product.collections %}
-{% if c.id == 404580991213 %} 
-{% unless customer %}
-{% assign  wlmHideItem_Product = true %}
-{% else %}
-{% unless wlmLockedTags120669 %}{% assign  wlmHideItem_Product = true %}{% endunless %}
-{% else %}
-{% assign  wlmHideItem_Product = true %}{% endunless %}
-
-{% endif %}
-{% endfor %}{% endif %}
 
 
 {% if wlmHideItem_Product == true %}{% continue %}{% endif %}
