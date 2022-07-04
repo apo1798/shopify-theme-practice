@@ -1,0 +1,22 @@
+{% assign wlmHideLinks=false %}
+{% assign wlmHideLinks=false %}
+{% unless customer %}
+{% assign wlmHideLinks = true %}
+{% else %}
+{% unless wlmLockedTags120669 %}{% assign wlmHideLinks = true %}{% endunless %}
+{% if wlmHideLinks %}
+<script type='text/javascript'>
+wlm.arrHideLinks.push('a[href$="/collections/秘密商品"],a[href*="/collections/秘密商品/"],a[href*="/collections/秘密商品?"],a[href*="/collections/秘密商品#"]');
+</script><style type='text/css' class='wlm-auto-hl-styles'>a[href$="/collections/秘密商品"],a[href*="/collections/秘密商品/"],a[href*="/collections/秘密商品?"],a[href*="/collections/秘密商品#"]{ display: none !important; }</style>{% endif %}
+{% else %}
+{% assign wlmHideLinks = true %}
+<script type='text/javascript'>
+wlm.arrHideLinks.push('a[href$="/collections/秘密商品"],a[href*="/collections/秘密商品/"],a[href*="/collections/秘密商品?"],a[href*="/collections/秘密商品#"]');
+</script><style type='text/css' class='wlm-auto-hl-styles'>a[href$="/collections/秘密商品"],a[href*="/collections/秘密商品/"],a[href*="/collections/秘密商品?"],a[href*="/collections/秘密商品#"]{ display: none !important; }</style>{% endunless %}
+{% if wlmHideLinks %}
+<script type='text/javascript'>
+wlm.arrHideLinks.push('a[href$="/collections/秘密商品"],a[href*="/collections/秘密商品/"],a[href*="/collections/秘密商品?"],a[href*="/collections/秘密商品#"]');
+</script><style type='text/css' class='wlm-auto-hl-styles'>a[href$="/collections/秘密商品"],a[href*="/collections/秘密商品/"],a[href*="/collections/秘密商品?"],a[href*="/collections/秘密商品#"]{ display: none !important; }</style>
+{% endif %}
+
+

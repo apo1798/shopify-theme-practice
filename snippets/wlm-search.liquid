@@ -1,0 +1,26 @@
+{%- assign w_continue = 'no' -%}
+{% assign wlmHideItem_Search = false %}{% assign wlmLockedTags120669 = false %}
+{% for tag in customer.tags %}
+{% if tag == '一等客戶' %}{% assign wlmLockedTags120669 = true %}{% endif %}
+{% endfor %}
+
+
+{%  if wlm-search.object_type == 'product' and wlm-search.collections %}
+
+{% for c in wlm-search.collections %}
+
+    {% if c.id == 404580991213 %}
+{% unless customer %}
+{% assign wlmLockON = true %}
+  {% assign wlmHideItem_Search = true %}
+{% else %}
+{% unless wlmLockedTags120669 %}{% assign wlmHideItem_Search = true %}{% endunless %}
+{% else %}{% assign wlmHideItem_Search = true %}{% endunless %}
+
+{% endif %}
+{% endfor %}{% endif %}
+
+
+{% if wlmHideItem_Search == true %}{% continue %}{% endif %}
+
+{%- if wlm_is_render == 'yes' -%}{{- w_continue -}}{%-endif-%}

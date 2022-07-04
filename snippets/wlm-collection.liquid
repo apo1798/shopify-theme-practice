@@ -1,0 +1,27 @@
+{%- assign w_continue = 'no' -%}
+{% assign wlmHideItem_Collection = false %}{% assign wlmLockedTags120669 = false %}
+
+
+{% assign wlmLockedTags120669 = false %}
+{% for tag in customer.tags %}
+{% if tag == '一等客戶' %}{% assign wlmLockedTags120669 = true %}{% endif %}
+{% endfor %}
+
+{% assign wlmHideItem_Collection = false %}
+
+{% if wlm-collection.id == 404580991213  %}
+{% unless customer %}
+{% assign wlmHideItem_Collection = true %}
+{% else %}
+{% unless wlmLockedTags120669 %}{% assign wlmHideItem_Collection = true %}
+{% endunless %}
+{% else %}
+{% assign wlmHideItem_Collection = true %}
+{% endunless %}
+{% endif %}
+
+
+
+{% if wlmHideItem_Collection == true %}{% continue %}{% endif %}
+
+{%- if wlm_is_render == 'yes' -%}{{- w_continue -}}{%-endif-%}
