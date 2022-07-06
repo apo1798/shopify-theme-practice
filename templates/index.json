@@ -55,11 +55,11 @@
         "0bbebc8c-a144-44d2-b993-4a828eec20b8"
       ],
       "settings": {
-        "carousel_name": ""
       }
     },
     "1656406469f3cf6e25": {
       "type": "test-practice",
+      "disabled": true,
       "blocks": {
         "21418357-6243-4444-a34a-84140d7e04d1": {
           "type": "product_card",
@@ -122,6 +122,7 @@
     },
     "1656474104284ca0b8": {
       "type": "test-practice",
+      "disabled": true,
       "blocks": {
         "45d53b7e-2c00-4012-bccf-531ee635d6df": {
           "type": "product_card",
@@ -208,6 +209,73 @@
         "button_label": "看看更多",
         "button_link": "",
         "color_scheme": "background-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1657096325200c4a34": {
+      "type": "multicolumn",
+      "blocks": {
+        "16570963252072729f-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/scaled.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "16570963252072729f-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0623-BN-02-1536x504.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "16570963252072729f-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1-1-1024x336.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "e53df176-fb66-45bd-8e30-ffcfff762cc5": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Liz_-4-scaled.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16570963252072729f-0",
+        "16570963252072729f-1",
+        "16570963252072729f-2",
+        "e53df176-fb66-45bd-8e30-ffcfff762cc5"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "background-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -581,6 +649,7 @@
     "1656406469f3cf6e25",
     "1656474104284ca0b8",
     "1656382515150a1e78",
+    "1657096325200c4a34",
     "1655973375a1da90c6",
     "165586395565446ad0",
     "16558006500888fefe",
