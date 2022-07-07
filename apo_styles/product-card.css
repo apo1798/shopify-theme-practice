@@ -44,7 +44,8 @@
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: all 400ms ease;
 }
 .product-card-section .product-card-container .product-card .product-choose {
@@ -99,4 +100,4 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
-}
+}/*# sourceMappingURL=product-card.css.map */

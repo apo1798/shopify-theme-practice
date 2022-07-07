@@ -6,27 +6,27 @@
         "165638251505482231-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1024x683_22067218-70fb-4584-b4fc-b8de486458f2.png",
+            "image": "shopify://shop_images/1024x683_22067218-70fb-4584-b4fc-b8de486458f2.png",
             "title": "精選中、西早午餐選擇，開啟一天的美味序曲！",
             "text": "",
             "link_label": "看更多",
-            "link": "https:\/\/bit.ly\/3xIHstQ"
+            "link": "https://bit.ly/3xIHstQ"
           }
         },
         "165638251505482231-0": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1024x683_60c97988-7f11-4e01-9976-00bd638d3afe.png",
+            "image": "shopify://shop_images/1024x683_60c97988-7f11-4e01-9976-00bd638d3afe.png",
             "title": "疫情之下，有備無患。吃得簡單，也要吃得講究。",
             "text": "",
             "link_label": "看更多",
-            "link": "https:\/\/bit.ly\/3xIHstQ"
+            "link": "https://bit.ly/3xIHstQ"
           }
         },
         "165638251505482231-2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1024x683_3552f6ad-814c-4e77-adb8-f9c0c7790bb9.png",
+            "image": "shopify://shop_images/1024x683_3552f6ad-814c-4e77-adb8-f9c0c7790bb9.png",
             "title": "看看大家都買了什麼？ 最夯的人氣商品都在這！",
             "text": "",
             "link_label": "",
@@ -36,9 +36,9 @@
         "e00ce370-f0b2-4ff9-bc23-84aa12be4f36": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1024x683.png",
+            "image": "shopify://shop_images/1024x683.png",
             "title": "限時一週販售的預購商品，想吃美食下手要快！",
-            "text": "<p><\/p><p><\/p>",
+            "text": "<p></p><p></p>",
             "link_label": "",
             "link": ""
           }
@@ -73,9 +73,9 @@
         "16570963252072729f-0": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/scaled.jpg",
+            "image": "shopify://shop_images/scaled.jpg",
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -83,9 +83,9 @@
         "16570963252072729f-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0623-BN-02-1536x504.jpg",
+            "image": "shopify://shop_images/0623-BN-02-1536x504.jpg",
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -93,9 +93,9 @@
         "16570963252072729f-2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1-1-1024x336.jpg",
+            "image": "shopify://shop_images/1-1-1024x336.jpg",
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -103,9 +103,9 @@
         "e53df176-fb66-45bd-8e30-ffcfff762cc5": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Liz_-4-scaled.jpg",
+            "image": "shopify://shop_images/Liz_-4-scaled.jpg",
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -141,12 +141,12 @@
         "165597337519e1ed99-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0623-BN-02-1536x504.jpg",
+            "image": "shopify://shop_images/0623-BN-02-1536x504.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "連結",
-            "link": "http:\/\/tasterselection.com\/",
+            "link": "http://tasterselection.com/",
             "button_style_secondary": false,
             "box_align": "bottom-center",
             "show_text_box": false,
@@ -159,12 +159,12 @@
         "165597337519e1ed99-1": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0527BN__-1-1536x504.jpg",
+            "image": "shopify://shop_images/0527BN__-1-1536x504.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "連結",
-            "link": "http:\/\/tasterselection.com\/",
+            "link": "http://tasterselection.com/",
             "button_style_secondary": true,
             "box_align": "bottom-center",
             "show_text_box": false,
@@ -177,12 +177,12 @@
         "4d3999c9-202f-4051-a169-b34b0701a1b7": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1-1-1024x336.jpg",
+            "image": "shopify://shop_images/1-1-1024x336.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "連結",
-            "link": "http:\/\/tasterselection.com\/",
+            "link": "http://tasterselection.com/",
             "button_style_secondary": true,
             "box_align": "bottom-center",
             "show_text_box": false,
@@ -195,12 +195,12 @@
         "ae948148-1d88-46cd-815c-d91e4cc19ec8": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Caviar-HousePrunier_Banner-scaled.jpg",
+            "image": "shopify://shop_images/Caviar-HousePrunier_Banner-scaled.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "連結",
-            "link": "http:\/\/tasterselection.com\/",
+            "link": "http://tasterselection.com/",
             "button_style_secondary": false,
             "box_align": "bottom-right",
             "show_text_box": false,
@@ -213,12 +213,12 @@
         "1f96e70d-0fd0-44cf-a771-3829901eb3fc": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Liz_-4-scaled.jpg",
+            "image": "shopify://shop_images/Liz_-4-scaled.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "連結",
-            "link": "http:\/\/tasterselection.com\/",
+            "link": "http://tasterselection.com/",
             "button_style_secondary": false,
             "box_align": "top-left",
             "show_text_box": false,
@@ -277,14 +277,11 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>我們致力於提供環保、耐用、高品質的台灣文具。設計結合各式台灣傳統文化元素，讓文具不只是書寫與文書，更是文化上的享受。<\/strong><\/p>"
+            "text": "<p><strong>我們致力於提供環保、耐用、高品質的台灣文具。設計結合各式台灣傳統文化元素，讓文具不只是書寫與文書，更是文化上的享受。</strong></p>"
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text"
-      ],
+      "block_order": ["heading", "text"],
       "settings": {
         "color_scheme": "background-1",
         "full_width": true,
@@ -344,11 +341,7 @@
           }
         }
       },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
+      "block_order": ["collection-0", "product", "collection-1"],
       "settings": {
         "heading": "台灣鬼怪聯名商品",
         "heading_size": "h2",
@@ -381,7 +374,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "逛逛商店",
-            "button_link_1": "shopify:\/\/collections\/all",
+            "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -389,11 +382,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
+      "block_order": ["heading", "text", "button"],
       "settings": {
         "image_overlay_opacity": 60,
         "image_height": "medium",
@@ -413,7 +402,7 @@
       "settings": {
         "heading": "",
         "heading_size": "h1",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
         "color_scheme": "background-1",
@@ -429,7 +418,7 @@
           "type": "column",
           "settings": {
             "title": "阿成文具行的根本",
-            "text": "<p>那麼，我們一般認為，抓住了問題的關鍵，其他一切則會迎刃而解。徐志摩深信，由於我們過於習慣在別人面前戴面具，因此最後導致在自己面前偽裝自己。<\/p>",
+            "text": "<p>那麼，我們一般認為，抓住了問題的關鍵，其他一切則會迎刃而解。徐志摩深信，由於我們過於習慣在別人面前戴面具，因此最後導致在自己面前偽裝自己。</p>",
             "link_label": "",
             "link": ""
           }
@@ -438,7 +427,7 @@
           "type": "column",
           "settings": {
             "title": "日思夜想的品質提升",
-            "text": "<p>本人也經過了深思熟慮，日日夜夜思考這個問題。若無法徹底理解阿成文具行，恐怕會是人類的一大遺憾。若思緒夠清晰，那麼阿成文具行也就不那麼複雜了。<\/p>",
+            "text": "<p>本人也經過了深思熟慮，日日夜夜思考這個問題。若無法徹底理解阿成文具行，恐怕會是人類的一大遺憾。若思緒夠清晰，那麼阿成文具行也就不那麼複雜了。</p>",
             "link_label": "",
             "link": ""
           }
@@ -447,17 +436,13 @@
           "type": "column",
           "settings": {
             "title": "如履薄冰精神",
-            "text": "<p>若能夠欣賞到阿成文具行的美，相信我們一定會對阿成文具行改觀。劉基講過一句值得人反覆尋思的話，凡與敵戰，須務持重。見利則動，不見利則止，慎不可輕舉也。<\/p>",
+            "text": "<p>若能夠欣賞到阿成文具行的美，相信我們一定會對阿成文具行改觀。劉基講過一句值得人反覆尋思的話，凡與敵戰，須務持重。見利則動，不見利則止，慎不可輕舉也。</p>",
             "link_label": "",
             "link": ""
           }
         }
       },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
+      "block_order": ["column1", "column2", "column3"],
       "settings": {
         "title": "",
         "heading_size": "h1",

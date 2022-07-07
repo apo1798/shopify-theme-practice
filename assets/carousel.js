@@ -15,7 +15,9 @@ const slider = () => {
     Array.from(slide.children).forEach((_, i) => {
       dotContainer.insertAdjacentHTML(
         'beforeend',
-        `<button class='dots__dot' data-slide='${i}' aria-label='第${i}張圖片'></button>`
+        `<button class='dots__dot' data-slide='${i}' aria-label='第${
+          i + 1
+        }張圖片'></button>`
       );
     });
   };
@@ -93,29 +95,12 @@ const slider = () => {
     createDots();
     assignActiveDot(0);
     assignActiveSlide(0);
-    // sliderTimer();
 
-    // const firstSliderImage = document
-    //   .querySelector('.carousel-image.active-slide')
-    //   .querySelector('img');
-    // console.log(firstSliderImage);
-
-    // firstSliderImage.onload = () => {
-    //   console.log('Listener is working!');
-    //   sliderTimer();
-    // };
-
+    // 網頁載入完成後幻燈片才開始運作
     window.addEventListener('load', () => {
       // console.log('Window listener is working now...');
       sliderTimer();
     });
-
-    // firstSliderImage.addEventListener('load', () => {
-    //   console.log('123');
-    //   // 第一張圖片載入完成後才開始動
-    //   console.log(firstSliderImage);
-    //   sliderTimer();
-    // });
   };
 
   init();

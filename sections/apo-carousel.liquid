@@ -3,9 +3,32 @@
 <script src='{{ 'carousel.js' | asset_url }}' defer='defer'></script>
 
 {% if section.blocks != blank %}
-  <div class='carousel'>
-    <button class='carousel-button prev'>&lt;</button>
-    <button class='carousel-button next'>&gt;</button>
+  <div
+    class='carousel'
+    data-carousel-interval='{{ section.settings.carousel-interval }}'
+  >
+    <button class='carousel-button prev' aria-label='上一頁幻燈片'>
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='192'
+        height='192'
+        fill='#ffffff'
+        viewBox='0 0 256 256'
+      >
+        <rect width="256" height="256" fill="none"></rect><polyline points="160 208 80 128 160 48" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+      </svg>
+    </button>
+    <button class='carousel-button next' aria-label='下一頁幻燈片'>
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='192'
+        height='192'
+        fill='#ffffff'
+        viewBox='0 0 256 256'
+      >
+        <rect width="256" height="256" fill="none"></rect><polyline points="96 48 176 128 96 208" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+      </svg>
+    </button>
     <div class='carousel-slide'>
       {% for block in section.blocks %}
         {% case block.type %}
@@ -31,8 +54,10 @@
                         {{ image | image_url }} {{ image.width }}w
                       '
                       src='{{ image | image_url: width: 2000 }}'
-                      alt='{{ image.alt }}'
+                      alt='{{ image.alt | escape }}'
                       loading='lazy'
+                      width='{{ block.settings.image.width }}'
+                      height='{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round }}'
                     >
                   </a>
                 {% else %}
@@ -49,6 +74,8 @@
                     src='{{ image | image_url: width: 2000 }}'
                     alt='{{ image.alt }}'
                     loading='lazy'
+                    width='{{ block.settings.image.width }}'
+                    height='{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round }}'
                   >
                 {% endif %}
               </div>
@@ -62,9 +89,19 @@
 
 {% schema %}
 {
-  "name": "圖片幻燈片",
+  "name": "#圖片幻燈片",
   "tag": "section",
-  "settings": [],
+  "settings": [
+    {
+      "id": "carousel-interval",
+      "type": "range",
+      "label": "幻燈片間隔秒數",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "default": 5
+    }
+  ],
   "blocks": [
     {
       "name": "圖片",
@@ -78,14 +115,14 @@
         {
           "id": "url",
           "type": "url",
-          "label": "選擇頁面（若無則為無連結的圖片）"
+          "label": "選擇頁面連結（若無則為無連結的圖片）"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "圖片幻燈片123"
+      "name": "#圖片幻燈片"
     }
   ]
 }
