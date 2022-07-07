@@ -215,7 +215,13 @@
     <!-- Upsell & Cross Sell - Selleasy by Logbase - Starts -->
       <script src='https://upsell-app.logbase.io/lb-upsell.js?shop=theme-practice-apo.myshopify.com' defer></script>
     <!-- Upsell & Cross Sell - Selleasy by Logbase - Ends -->
-{% include 'ufe-offer' %}</head>
+{% include 'ufe-offer' %}
+
+{% if content_for_header contains 'fastbundle.co' %}
+    {% render 'fast_bundle_service' %}
+{% endif %}
+
+</head>
 
   <body class="gradient">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
