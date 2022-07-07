@@ -6,7 +6,71 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "1657161416d19fa258": {
+      "type": "product-card",
+      "blocks": {
+        "5f6cde43-0e40-4e2a-b0e8-f07f717ad890": {
+          "type": "product_card",
+          "settings": {
+            "product": "和牛研究室-經典暢銷含運組_0629"
+          }
+        },
+        "f04d00a6-a503-428f-b76f-ff635fa6cc77": {
+          "type": "product_card",
+          "settings": {
+            "product": "和牛研究室_限量單品自由選_0629"
+          }
+        },
+        "a0732bd1-2d50-47df-8677-39cb99bfc932": {
+          "type": "product_card",
+          "settings": {
+            "product": "好ㄘ組合_我要吃到飽免運組_好評加開"
+          }
+        },
+        "8e720d34-c00f-4ff8-8afb-45cc406f8743": {
+          "type": "product_card",
+          "settings": {
+            "product": "小三元-嚴選星級港點免運組冷凍配送_0624"
+          }
+        },
+        "c4862bc3-5b35-41de-b77f-a64029d0d736": {
+          "type": "product_card",
+          "settings": {
+            "product": "小三元-星級港點-自由選冷凍宅配_0624"
+          }
+        },
+        "c3488d0e-cd8e-46f3-b610-6b80dacdab0b": {
+          "type": "product_description",
+          "settings": {
+            "description": "<p><strong>TERRA沁夏新品嚐鮮組<\/strong><br\/>【新品上市】極黑巴布卡<br\/>【新品上市】極黑可頌 （2個／組）<br\/>巧克力凍蛋糕雙入組（170g x2）<\/p><p><strong>️TERRA 吃甜甜大滿足組<\/strong><br\/>【新品上市】極黑巴布卡<br\/>【新品上市】極黑可頌 （2個／組）<br\/>經典冰淇淋三入組（巧克力、咖啡、香草，3.5oz各1）<br\/>巧克力凍蛋糕 170g x1<\/p><p><strong>TERRA夏日精選組<\/strong><br\/>經典冰淇淋三入組（巧克力、咖啡、香草，3.5oz各1）<br\/>巧克力凍蛋糕 170g x1<\/p><p><strong>️巧克力凍蛋糕雙入組<\/strong><br\/>巧克力凍蛋糕 170g x2<\/p><p><strong>加價購專區<\/strong><\/p><p><strong>【新品上市】極黑巴布卡<br\/>【新品上市】極黑可頌（2個／組）<\/strong><\/p>"
+          }
+        },
+        "18b076a9-9aa9-4d70-862a-01e8631e003e": {
+          "type": "product_card",
+          "settings": {
+            "product": "烏骨雞湯_我要吃到飽免運組_好評加開"
+          }
+        }
+      },
+      "block_order": [
+        "5f6cde43-0e40-4e2a-b0e8-f07f717ad890",
+        "f04d00a6-a503-428f-b76f-ff635fa6cc77",
+        "a0732bd1-2d50-47df-8677-39cb99bfc932",
+        "8e720d34-c00f-4ff8-8afb-45cc406f8743",
+        "c4862bc3-5b35-41de-b77f-a64029d0d736",
+        "c3488d0e-cd8e-46f3-b610-6b80dacdab0b",
+        "18b076a9-9aa9-4d70-862a-01e8631e003e"
+      ],
+      "settings": {
+        "card_title": "這是一組商品卡片區段",
+        "card_text": "",
+        "show_divider": true
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main",
+    "1657161416d19fa258"
+  ]
 }
