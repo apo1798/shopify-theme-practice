@@ -14,8 +14,7 @@
         "page-title": "文章一覽",
         "show_articles_by": "show_articles_by_blog",
         "show_dates_by": "%m\/%d",
-        "show_excerpt": true,
-        "show_excerpt_divider": false
+        "show_excerpt": true
       }
     }
   },
