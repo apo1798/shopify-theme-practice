@@ -1,0 +1,193 @@
+{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+
+<h3>全部文章</h3>
+
+{% style %}
+
+{% endstyle %}
+
+{% comment %} 去導覽列中一個叫做'blogs'的集合找子分類 {% endcomment %}
+{% assign blogs_linklist_handle = "blogs" %}
+
+{% if section.settings.show_articles_by == 'show_articles_by_blog' %}
+  {% if articles != blank %}
+    <section>
+      {% assign blogs_linklist = linklists[blogs_linklist_handle] %}
+      {% assign articles = '' | split: "," %}
+      {% for blog_link in blogs_linklist.links %}
+        <h2>
+          <a
+            href='{{ blog_link.url }}'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            {{- blog_link.title -}}
+          </a>
+        </h2>
+        {% assign handle = blog_link.title %}
+        <ul>
+          {% for article in blogs[handle].articles %}
+            <li>
+              {{- article.created_at | date: '%Y/%m/%d' -}}
+              {{- article.title | link_to: article.url }}
+              {% if section.settings.show_excerpt %}
+                <p>
+                  {{- article.excerpt -}}
+                </p>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    </section>
+  {% endif %}
+{% endif %}
+
+<section class='post-container'></section>
+
+{% comment %}
+  sortingYear: 初始為'2000'，articles是一個array(?)，只要遇到一個新的年份就存起來，生成 h2 標題 + 文章連結。其他則只有文章連結。
+{% endcomment %}
+
+{% if section.settings.show_articles_by == 'show_articles_by_year' %}
+  {% if articles != blank %}
+    {% liquid
+      assign blogs_linklist = linklists[blogs_linklist_handle]
+      assign articles = "" | split: ","
+      for blog_link in blogs_linklist.links
+        assign articles = articles | concat: blog_link.object.articles
+      endfor
+      assign articles = articles | uniq | sort: "created_at" | reverse
+    %}
+
+    {% assign sortingYear = '2000' %}
+
+    <section class='page-width'>
+      {% for article in articles %}
+        {% assign articleYear  = article.created_at | date: '%Y' %}
+
+        {% comment %} 年份不同時 {% endcomment %}
+        {% if sortingYear != articleYear %}
+          {% assign sortingYear = articleYear %}
+          <h2>{{ sortingYear }}</h2>
+        {% endif %}
+
+        <div>
+          <h3>
+            {{ article.created_at | date: '%m/%d' }}&nbsp;&nbsp;
+            {{- article.title | link_to: article.url -}}
+          </h3>
+          {% if section.settings.show_excerpt %}
+            <p>
+              {{- article.excerpt -}}
+            </p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </section>
+  {% endif %}
+{% endif %}
+
+{% comment %} /////////// {% endcomment %}
+{% comment %} Pagination {% endcomment %}
+{% comment %} /////////// {% endcomment %}
+
+{% comment %}
+   {%- paginate blogs["新聞"].articles by 6 -%}
+    <div class='main-blog page-width section-{{ section.id }}-padding'>
+      <div class='blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}'>
+        {% for handle in blog_handles -%}
+          {% for article in blogs[handle].articles %}
+            <div class='blog-articles__article article'>
+              {%-
+                render 'article-card',
+                article: article,
+                media_height: section.settings.image_height,
+                media_aspect_ratio: article.image.aspect_ratio,
+                show_image: section.settings.show_image,
+                show_date: section.settings.show_date,
+                show_author: section.settings.show_author,
+                show_excerpt: true
+              -%}
+            </div>
+          {% endfor %}
+        {% endfor %}
+      </div>
+
+      {%- if paginate.pages > 1 -%}
+        {%- render 'pagination', paginate: paginate -%}
+      {%- endif -%}
+    </div>
+  {%- endpaginate -%}
+{% endcomment %}
+
+{% comment %} /////////// {% endcomment %}
+{% comment %} JS {% endcomment %}
+{% comment %} /////////// {% endcomment %}
+
+{% comment %}
+   <script type='text/javascript'>
+    console.log({{ articles | json }})
+
+    const allArticles = {{ articles | json }};
+    let currentYear = new Date().getFullYear();
+    let lastYear = new Date(allArticles.at(-1).created_at).getFullYear();
+    let articleListMarkup = ``;
+
+    for (let i = currentYear; i >= lastYear; i-- ){
+      const articleByYear = allArticles.filter(article => new Date(article.created_at).getFullYear() === i)
+
+      const yearArrayMarkup = articleByYear.map((article) =>  {
+        const month = String(new Date(article.created_at).getMonth()).padStart(2,'0')
+        const date = String(new Date(article.created_at).getDate()).padStart(2,'0')
+        return `<li>${month}/${date} ${article.title}</li>`}).join('');
+
+      articleListMarkup += `<h3>${currentYear}</h3><ul>${yearArrayMarkup}</ul>`;
+    }
+    document.querySelector('.post-container').insertAdjacentHTML('beforeend', articleListMarkup)
+  </script>
+{% endcomment %}
+
+{% schema %}
+{
+  "name": "#全部文章",
+  "settings": [
+    {
+      "id": "show_articles_by",
+      "type": "radio",
+      "label": "文章顯示方式",
+      "options": [
+        {
+          "value": "show_articles_by_blog",
+          "label": "以主題分類"
+        },
+        {
+          "value": "show_articles_by_year",
+          "label": "以時間分類"
+        }
+      ],
+      "default": "show_articles_by_blog"
+    },
+    {
+      "id": "show_excerpt",
+      "type": "checkbox",
+      "label": "顯示文章摘要",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "#全部文章",
+      "category": "Reference"
+    }
+  ],
+  "templates": [
+    "article",
+    "blog",
+    "index",
+    "page"
+  ]
+}
+{% endschema %}
