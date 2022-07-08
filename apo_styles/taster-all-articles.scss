@@ -1,0 +1,70 @@
+$link-default-color: #4d7cae;
+$link-hover-color: #375a7f;
+$article-date-color: #555;
+
+.taster-all-articles {
+  // Reset default style
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  ul,
+  li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: inherit;
+    font-size: inherit;
+  }
+  // End reset default style
+
+  margin-bottom: 5rem;
+
+  .page-title {
+    font-size: 4rem;
+  }
+
+  .blog-title {
+    font-size: 2.6rem;
+    margin: 5rem 0 0rem;
+  }
+
+  .article-list {
+    margin: 2rem 0rem 0rem 4rem;
+    padding-left: 2rem;
+    display: list-item;
+    list-style-type: initial;
+    font-size: 1.6rem;
+
+    .article-title {
+      font-size: 2rem;
+    }
+
+    .article-date {
+      color: $article-date-color;
+      margin-right: 0.3rem;
+    }
+
+    h3 {
+      margin: 0;
+    }
+
+    p {
+      margin-top: 0;
+      margin: 0;
+    }
+  }
+
+  a:link,
+  a:visited {
+    color: $link-default-color;
+  }
+
+  a:hover,
+  a:active {
+    color: $link-hover-color;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+}

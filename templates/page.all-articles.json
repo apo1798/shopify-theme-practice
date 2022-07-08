@@ -11,8 +11,11 @@
     "16572605512145d798": {
       "type": "taster-all-blog",
       "settings": {
+        "page-title": "文章一覽",
         "show_articles_by": "show_articles_by_blog",
-        "show_excerpt": true
+        "show_dates_by": "%m\/%d",
+        "show_excerpt": true,
+        "show_excerpt_divider": false
       }
     }
   },

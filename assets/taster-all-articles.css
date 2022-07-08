@@ -1,0 +1,53 @@
+.taster-all-articles {
+  margin-bottom: 5rem;
+}
+.taster-all-articles a {
+  text-decoration: none;
+  color: inherit;
+}
+.taster-all-articles ul,
+.taster-all-articles li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: inherit;
+  font-size: inherit;
+}
+.taster-all-articles .page-title {
+  font-size: 4rem;
+}
+.taster-all-articles .blog-title {
+  font-size: 2.6rem;
+  margin: 5rem 0 0rem;
+}
+.taster-all-articles .article-list {
+  margin: 2rem 0rem 0rem 4rem;
+  padding-left: 2rem;
+  display: list-item;
+  list-style-type: initial;
+  font-size: 1.6rem;
+}
+.taster-all-articles .article-list .article-title {
+  font-size: 2rem;
+}
+.taster-all-articles .article-list .article-date {
+  color: #555;
+  margin-right: 0.3rem;
+}
+.taster-all-articles .article-list h3 {
+  margin: 0;
+}
+.taster-all-articles .article-list p {
+  margin-top: 0;
+  margin: 0;
+}
+.taster-all-articles a:link,
+.taster-all-articles a:visited {
+  color: #4d7cae;
+}
+.taster-all-articles a:hover,
+.taster-all-articles a:active {
+  color: #375a7f;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

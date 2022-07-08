@@ -1,23 +1,23 @@
-{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+{% comment %}
+   {{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+  {{ 'component-card.css' | asset_url | stylesheet_tag }}
+  {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+{% endcomment %}
 
-<h3>全部文章</h3>
-
-{% style %}
-
-{% endstyle %}
+{{ 'taster-all-articles.css' | asset_url | stylesheet_tag }}
 
 {% comment %} 去導覽列中一個叫做'blogs'的集合找子分類 {% endcomment %}
 {% assign blogs_linklist_handle = "blogs" %}
+{% assign dateFilter = section.settings.show_dates_by %}
 
 {% if section.settings.show_articles_by == 'show_articles_by_blog' %}
   {% if articles != blank %}
-    <section>
+    <section class='taster-all-articles page-width'>
+      <h1 class='page-title'>{{ section.settings.page-title }}</h1>
       {% assign blogs_linklist = linklists[blogs_linklist_handle] %}
       {% assign articles = '' | split: "," %}
       {% for blog_link in blogs_linklist.links %}
-        <h2>
+        <h2 class='blog-title'>
           <a
             href='{{ blog_link.url }}'
             target='_blank'
@@ -29,9 +29,13 @@
         {% assign handle = blog_link.title %}
         <ul>
           {% for article in blogs[handle].articles %}
-            <li>
-              {{- article.created_at | date: '%Y/%m/%d' -}}
-              {{- article.title | link_to: article.url }}
+            <li class='article-list'>
+              <h3 class='article-title'>
+                <span class='article-date'>
+                  {{- article.created_at | date: dateFilter -}}
+                </span>
+                <span>{{- article.title | link_to: article.url }}</span>
+              </h3>
               {% if section.settings.show_excerpt %}
                 <p>
                   {{- article.excerpt -}}
@@ -57,27 +61,30 @@
       assign blogs_linklist = linklists[blogs_linklist_handle]
       assign articles = "" | split: ","
       for blog_link in blogs_linklist.links
-        assign articles = articles | concat: blog_link.object.articles
+      assign articles = articles | concat: blog_link.object.articles
       endfor
       assign articles = articles | uniq | sort: "created_at" | reverse
     %}
 
     {% assign sortingYear = '2000' %}
 
-    <section class='page-width'>
+    <section class='taster-all-articles page-width'>
+      <h1 class='page-title'>{{ section.settings.page-title }}</h1>
       {% for article in articles %}
         {% assign articleYear  = article.created_at | date: '%Y' %}
 
         {% comment %} 年份不同時 {% endcomment %}
         {% if sortingYear != articleYear %}
           {% assign sortingYear = articleYear %}
-          <h2>{{ sortingYear }}</h2>
+          <h2 class='blog-title'>{{ sortingYear }}</h2>
         {% endif %}
 
-        <div>
-          <h3>
-            {{ article.created_at | date: '%m/%d' }}&nbsp;&nbsp;
-            {{- article.title | link_to: article.url -}}
+        <div class='article-list'>
+          <h3 class='article-title'>
+            <span class='article-date'>
+              {{- article.created_at | date: dateFilter -}}
+            </span>
+            <span>{{- article.title | link_to: article.url -}}</span>
           </h3>
           {% if section.settings.show_excerpt %}
             <p>
@@ -155,6 +162,12 @@
   "name": "#全部文章",
   "settings": [
     {
+      "id": "page-title",
+      "type": "text",
+      "label": "段落標題",
+      "default": "文章一覽"
+    },
+    {
       "id": "show_articles_by",
       "type": "radio",
       "label": "文章顯示方式",
@@ -169,6 +182,30 @@
         }
       ],
       "default": "show_articles_by_blog"
+    },
+    {
+      "id": "show_dates_by",
+      "type": "radio",
+      "label": "時間顯示方式",
+      "options": [
+        {
+          "value": "%m/%d",
+          "label": "MM/DD (01/01)"
+        },
+        {
+          "value": "%Y/%m/%d",
+          "label": "YYYY/MM/DD (2022/01/01)"
+        },
+        {
+          "value": "%b %e",
+          "label": "Month DD (Jan 1)"
+        },
+        {
+          "value": "%B %e",
+          "label": "fullMonth DD (January 1)"
+        }
+      ],
+      "default": "%m/%d"
     },
     {
       "id": "show_excerpt",
