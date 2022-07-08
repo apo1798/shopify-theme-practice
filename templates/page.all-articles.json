@@ -12,7 +12,7 @@
       "type": "taster-all-blog",
       "settings": {
         "show_articles_by": "show_articles_by_blog",
-        "show_excerpt": false
+        "show_excerpt": true
       }
     }
   },
