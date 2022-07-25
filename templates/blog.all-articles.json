@@ -18,13 +18,10 @@
       "settings": {
         "page-title": "文章一覽",
         "show_articles_by": "show_articles_by_blog",
-        "show_dates_by": "%Y\/%m\/%d",
+        "show_dates_by": "%Y/%m/%d",
         "show_excerpt": true
       }
     }
   },
-  "order": [
-    "main",
-    "165727374741970305"
-  ]
+  "order": ["main", "165727374741970305"]
 }

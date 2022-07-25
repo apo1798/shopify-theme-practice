@@ -354,12 +354,14 @@
                   {{ form | payment_terms }}
                 {%- endform -%}
               </div>
-            {%- when 'description' -%}
-              {%- if product.description != blank -%}
-                <div class='product__description rte quick-add-hidden'>
-                  {{ product.description }}
-                </div>
-              {%- endif -%}
+              {% comment %}
+                 {%- when 'description' -%}
+                {%- if product.description != blank -%}
+                  <div class='product__description rte quick-add-hidden'>
+                    {{ product.description }}
+                  </div>
+                {%- endif -%}
+              {% endcomment %}
             {%- when 'custom_liquid' -%}
               {{ block.settings.custom_liquid }}
             {%- when 'collapsible_tab' -%}
@@ -765,6 +767,18 @@
       </div>
     </div>
     {% comment %} TODO {% endcomment %}
+    <div class=''>
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'description' -%}
+            {%- if product.description != blank -%}
+              <div class='product__description rte quick-add-hidden'>
+                {{ product.description }}
+              </div>
+            {%- endif -%}
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
   </div>
 
   <product-modal
@@ -904,7 +918,7 @@
 
 {% schema %}
 {
-  "name": "t:sections.main-product.name",
+  "name": "#自訂商品區段",
   "tag": "section",
   "class": "section",
   "blocks": [
@@ -1373,6 +1387,11 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "#自訂商品區段"
     }
   ]
 }
