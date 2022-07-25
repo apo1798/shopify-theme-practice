@@ -129,6 +129,11 @@
             "text_style": "uppercase"
           }
         },
+        "d337bcbd-4905-4c2c-acbc-fbbd81f2cc36": {
+          "type": "title",
+          "settings": {
+          }
+        },
         "3c13ae6b-0ee4-4a75-8a28-7fa84ea5ac05": {
           "type": "price",
           "settings": {
@@ -159,6 +164,7 @@
       },
       "block_order": [
         "8b07df0b-9abc-4b2e-b019-93f05cf5f8d2",
+        "d337bcbd-4905-4c2c-acbc-fbbd81f2cc36",
         "3c13ae6b-0ee4-4a75-8a28-7fa84ea5ac05",
         "abeec31a-cf78-429c-a689-099fcf0ea56d",
         "873964ce-54e4-4367-b687-0cb13980c192",
@@ -166,7 +172,7 @@
         "7af2427f-70dd-4ac9-a536-6571d8fb9793"
       ],
       "settings": {
-        "enable_sticky_info": true,
+        "enable_sticky_info": false,
         "gallery_layout": "stacked",
         "media_size": "large",
         "mobile_thumbnails": "hide",
