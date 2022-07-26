@@ -41,7 +41,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": false
+            "show_dynamic_checkout": true
           }
         },
         "description": {
@@ -120,6 +120,7 @@
     },
     "1658743876459a04da": {
       "type": "custom-product",
+      "disabled": true,
       "blocks": {
         "8b07df0b-9abc-4b2e-b019-93f05cf5f8d2": {
           "type": "text",
