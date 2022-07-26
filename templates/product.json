@@ -47,6 +47,7 @@
         "description": {
           "type": "description",
           "settings": {
+            "description_bottom": true
           }
         },
         "collapsible-row-0": {
@@ -116,70 +117,6 @@
         "enable_video_looping": false,
         "padding_top": 48,
         "padding_bottom": 12
-      }
-    },
-    "1658743876459a04da": {
-      "type": "custom-product",
-      "disabled": true,
-      "blocks": {
-        "8b07df0b-9abc-4b2e-b019-93f05cf5f8d2": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "d337bcbd-4905-4c2c-acbc-fbbd81f2cc36": {
-          "type": "title",
-          "settings": {
-          }
-        },
-        "3c13ae6b-0ee4-4a75-8a28-7fa84ea5ac05": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "abeec31a-cf78-429c-a689-099fcf0ea56d": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "873964ce-54e4-4367-b687-0cb13980c192": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
-        "b6b35038-2fa0-40b1-88d5-c3ccaa9fc312": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true
-          }
-        },
-        "7af2427f-70dd-4ac9-a536-6571d8fb9793": {
-          "type": "description",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "8b07df0b-9abc-4b2e-b019-93f05cf5f8d2",
-        "d337bcbd-4905-4c2c-acbc-fbbd81f2cc36",
-        "3c13ae6b-0ee4-4a75-8a28-7fa84ea5ac05",
-        "abeec31a-cf78-429c-a689-099fcf0ea56d",
-        "873964ce-54e4-4367-b687-0cb13980c192",
-        "b6b35038-2fa0-40b1-88d5-c3ccaa9fc312",
-        "7af2427f-70dd-4ac9-a536-6571d8fb9793"
-      ],
-      "settings": {
-        "enable_sticky_info": true,
-        "gallery_layout": "stacked",
-        "media_size": "large",
-        "mobile_thumbnails": "hide",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "image-with-text": {
@@ -283,7 +220,6 @@
   },
   "order": [
     "main",
-    "1658743876459a04da",
     "image-with-text",
     "multicolumn",
     "product-recommendations"
