@@ -355,7 +355,7 @@
                 {%- endform -%}
               </div>
             {%- when 'description' -%}
-              {%- if product.description != blank -%}
+              {%- if product.description != blank and block.settings.description_bottom == false -%}
                 <div class='product__description rte quick-add-hidden'>
                   {{ product.description }}
                 </div>
@@ -765,6 +765,18 @@
       </div>
     </div>
     {% comment %} TODO {% endcomment %}
+    <div class=''>
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'description' -%}
+            {%- if product.description != blank and block.settings.description_bottom == true -%}
+              <div class='product__description rte quick-add-hidden'>
+                {{ product.description }}
+              </div>
+            {%- endif -%}
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
   </div>
 
   <product-modal
@@ -984,7 +996,6 @@
     {
       "type": "buy_buttons",
       "name": "t:sections.main-product.blocks.buy_buttons.name",
-      "limit": 1,
       "settings": [
         {
           "type": "checkbox",
@@ -998,7 +1009,15 @@
     {
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "description_bottom",
+          "label": "下方顯示商品敘述",
+          "default": false
+        }
+      ]
     },
     {
       "type": "share",
