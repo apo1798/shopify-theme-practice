@@ -47,7 +47,7 @@
         "description": {
           "type": "description",
           "settings": {
-            "description_bottom": false
+            "description_bottom": true
           }
         },
         "collapsible-row-0": {
