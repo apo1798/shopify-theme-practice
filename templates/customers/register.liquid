@@ -12,7 +12,7 @@
   <h1>
     {{ 'customer.register.title' | t }}
   </h1>
-  {%- form 'create_customer', novalidate: 'novalidate' -%}
+  {%- form 'create_customer' -%}
     {%- if form.errors -%}
       <h2 class='form__message' tabindex='-1' autofocus>
         <svg aria-hidden='true' focusable='false' role='presentation'>
@@ -45,6 +45,7 @@
         {% endif %}
         autocomplete='given-name'
         placeholder='{{ 'customer.register.first_name' | t }}'
+        required='required'
       >
       <label for='RegisterForm-FirstName'>
         {{ 'customer.register.first_name' | t }}
@@ -60,6 +61,7 @@
         {% endif %}
         autocomplete='family-name'
         placeholder='{{ 'customer.register.last_name' | t }}'
+        required='required'
       >
       <label for='RegisterForm-LastName'>
         {{ 'customer.register.last_name' | t }}
@@ -82,6 +84,7 @@
           aria-describedby='RegisterForm-email-error'
         {% endif %}
         placeholder='{{ 'customer.register.email' | t }}'
+        required='required'
       >
       <label for='RegisterForm-email'>
         {{ 'customer.register.email' | t }}
@@ -93,7 +96,7 @@
           <use href="#icon-error" />
         </svg>
         {{ form.errors.translated_fields['email'] | capitalize }}
-        {{ form.errors.messages['email'] }}.
+        {{ form.errors.messages['email'] }}
       </span>
     {%- endif -%}
     <div class='field'>
@@ -107,27 +110,49 @@
           aria-describedby='RegisterForm-password-error'
         {% endif %}
         placeholder='{{ 'customer.register.password' | t }}'
+        required='required'
       >
       <label for='RegisterForm-password'>
         {{ 'customer.register.password' | t }}
       </label>
     </div>
+    <p style='margin-top: 0; text-align: start;'>最少5個字元，最多40個字元</p>
     {%- if form.errors contains 'password' -%}
       <span id='RegisterForm-password-error' class='form__message'>
         <svg aria-hidden='true' focusable='false' role='presentation'>
           <use href="#icon-error" />
         </svg>
         {{ form.errors.translated_fields['password'] | capitalize }}
-        {{ form.errors.messages['password'] }}.
+        {{ form.errors.messages['password'] }}
       </span>
     {%- endif -%}
+
+    <div class='field'>
+      <input
+        type='string'
+        name='customer[note][phone]'
+        id='RegisterForm-Phone'
+        aria-required='true'
+        type='tel'
+        maxlength='10'
+        placeholder='手機號碼'
+        required='required'
+      >
+      <label for='RegisterForm-Phone'>手機號碼</label>
+    </div>
+
+
     <div class='field'>
       <input
         type='date'
         name='customer[note][birthday]'
-        id='birthday'
+        id='RegisterForm-Birthday'
+        aria-required='true'
+        max='{{ "today" | date: "%Y-%m-%d" }}'
+        placeholder='生日'
+        required='required'
       >
-      <label for='birthday' class='label'>生日</label>
+      <label for='RegisterForm-Birthday''>生日</label>
     </div>
     <button>
       {{ 'customer.register.submit' | t }}
