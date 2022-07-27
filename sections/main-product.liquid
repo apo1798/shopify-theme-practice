@@ -354,6 +354,7 @@
                   {{ form | payment_terms }}
                 {%- endform -%}
               </div>
+              {% comment %} 修改商品描述 {% endcomment %}
             {%- when 'description' -%}
               {%- if product.description != blank and block.settings.description_bottom == false -%}
                 <div class='product__description rte quick-add-hidden'>
@@ -764,8 +765,8 @@
         </a>
       </div>
     </div>
-    {% comment %} TODO {% endcomment %}
-    <div class='bottom-description'>
+    {% comment %} 修改商品描述 {% endcomment %}
+    <div>
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'description' -%}

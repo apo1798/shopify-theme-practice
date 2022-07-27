@@ -10,7 +10,8 @@ $carousel-dot-gray: rgba(255, 255, 255, 0.5);
 $carousel-dot-gray-active: rgba(255, 255, 255, 1);
 
 // 原圖是1536 * 504，不太好的寫法......
-$carousel-ratio: calc(504 / 1536);
+// $carousel-ratio: calc(504 / 1536); //美食加比例
+$carousel-ratio: calc(1256 / 2400);
 
 // 確保左右按鍵、下方點點都在推片上面
 // Left, right buttons + dotContainer -> z-index:10;

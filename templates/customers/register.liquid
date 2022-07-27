@@ -116,6 +116,7 @@
         {{ 'customer.register.password' | t }}
       </label>
     </div>
+    {% comment %} 新增 <p> {% endcomment %}
     <p style='margin-top: 0; text-align: start;'>最少5個字元，最多40個字元</p>
     {%- if form.errors contains 'password' -%}
       <span id='RegisterForm-password-error' class='form__message'>
@@ -127,6 +128,7 @@
       </span>
     {%- endif -%}
 
+    {% comment %} 新增 phone, birthday {% endcomment %}
     <div class='field'>
       <input
         type='string'
@@ -135,12 +137,13 @@
         aria-required='true'
         type='tel'
         maxlength='10'
-        placeholder='手機號碼'
+        placeholder='{{ 'customer.register.phone' | t -}}'
         required='required'
       >
-      <label for='RegisterForm-Phone'>手機號碼</label>
+      <label for='RegisterForm-Phone'>
+        {{ 'customer.register.phone' | t -}}
+      </label>
     </div>
-
 
     <div class='field'>
       <input
@@ -149,11 +152,14 @@
         id='RegisterForm-Birthday'
         aria-required='true'
         max='{{ "today" | date: "%Y-%m-%d" }}'
-        placeholder='生日'
+        placeholder='{{ 'customer.register.birthday' | t -}}'
         required='required'
       >
-      <label for='RegisterForm-Birthday''>生日</label>
+      <label for='RegisterForm-Birthday'>
+        {{- 'customer.register.birthday' | t -}}
+      </label>
     </div>
+    {% comment %}  {% endcomment %}
     <button>
       {{ 'customer.register.submit' | t }}
     </button>

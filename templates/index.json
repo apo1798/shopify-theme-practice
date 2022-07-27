@@ -6,21 +6,37 @@
         "d8d95812-ba1a-4ed7-8c75-0ef89667654c": {
           "type": "image_carousel",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0623-BN-02-1536x504.jpg",
+            "image": "shopify:\/\/shop_images\/banner-_NEW-05_24adbb75-4840-4155-b0b6-4b31bddcaf19.webp",
             "url": "shopify:\/\/products\/和牛研究室-經典暢銷含運組_0629"
           }
         },
         "39bbdd1d-8e43-4233-b2a8-152614376c80": {
           "type": "image_carousel",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0527BN__-1-1536x504.jpg",
+            "image": "shopify:\/\/shop_images\/banner-_NEW-07_536a9103-c6ba-4469-8a2a-5516351ce654.webp",
             "url": "shopify:\/\/blogs\/品牌"
+          }
+        },
+        "2fc2dd36-e632-4942-a3f3-30e420f33253": {
+          "type": "image_carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner-_NEW-06_5dd19a92-29ad-4f84-b014-64103ecca63e.webp",
+            "url": ""
+          }
+        },
+        "eccb67b1-3f19-426e-83c0-a2e39d992ec1": {
+          "type": "image_carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner-_NEW-08_e297ee21-92b1-4101-a82b-d017ae0e701d.webp",
+            "url": ""
           }
         }
       },
       "block_order": [
         "d8d95812-ba1a-4ed7-8c75-0ef89667654c",
-        "39bbdd1d-8e43-4233-b2a8-152614376c80"
+        "39bbdd1d-8e43-4233-b2a8-152614376c80",
+        "2fc2dd36-e632-4942-a3f3-30e420f33253",
+        "eccb67b1-3f19-426e-83c0-a2e39d992ec1"
       ],
       "settings": {
         "carousel-interval": 5
