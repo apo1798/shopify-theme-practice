@@ -17,6 +17,17 @@
 {% if wlmEnabled %}
 <style type="text/css">.wlm-message-pnf{text-align:center;}#wlm-pwd-form {padding: 30px 0;text-align: center}#wlm-wrapper,.wlm-form-holder {display: inline-block}#wlm-pwd-error {display: none;color: #fb8077;text-align: left}#wlm-pwd-error.wlm-error {border: 1px solid #fb8077}#wlm-pwd-form-button {display: inline-block!important;height: auto!important;padding: 8px 15px!important;background: #777;border-radius: 3px!important;color: #fff!important;text-decoration: none!important;vertical-align: top}.wlm-instantclick-fix,.wlm-item-selector {position: absolute;z-index: -999;display: none;height: 0;width: 0;font-size: 0;line-height: 0}</style>
 
+{% unless wlmLockON or wlmSuperPage or template == 'customers/register' %}
+{% assign wlmLockedContent = false %}
+{% if template contains "product" and product %} {% if product.id == 7822546370797 or product.id == 7822497579245 %} {% assign wlmLockedContent = true %}{% endif %}{% endif %}{% if wlmLockedContent %}
+<meta name='robots' content='NOINDEX,NOFOLLOW,NOARCHIVE,NOSNIPPET,NOODP,NOYDIR' />
+<script type='text/javascript'>
+wlm.navigateListByAuth.may.push({lcid: '123736', hp: '19Nab2TxSGnRWPq3qrEEpA==', wlmPwdMsg: '<p>這是秘密商品，請輸入密碼。或加入<a href=\"https://www.tasterselection.com/\">美食加Plus</a>以享更多優惠！</p>', pp: ''});
+</script>
+{% endif %}
+{% endunless %}
+
+
 {% endif %}
 
 {% capture wlm_check_hide %}{% include 'wlm-hideByLink' %}{% endcapture %}{% if wlm_check_hide != 'Liquid error: Could not find asset snippets/wlm-hideByLink.liquid' %}{% include 'wlm-hideByLink' %}{% endif %}
