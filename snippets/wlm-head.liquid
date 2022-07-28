@@ -17,11 +17,6 @@
 {% if wlmEnabled %}
 <style type="text/css">.wlm-message-pnf{text-align:center;}#wlm-pwd-form {padding: 30px 0;text-align: center}#wlm-wrapper,.wlm-form-holder {display: inline-block}#wlm-pwd-error {display: none;color: #fb8077;text-align: left}#wlm-pwd-error.wlm-error {border: 1px solid #fb8077}#wlm-pwd-form-button {display: inline-block!important;height: auto!important;padding: 8px 15px!important;background: #777;border-radius: 3px!important;color: #fff!important;text-decoration: none!important;vertical-align: top}.wlm-instantclick-fix,.wlm-item-selector {position: absolute;z-index: -999;display: none;height: 0;width: 0;font-size: 0;line-height: 0}</style>
 
-{% assign wlmLockedTags120670 = false %}
-{% for tag in customer.tags %}
-{% if tag == '一等客戶' %}{% assign wlmLockedTags120670 = true %}{% endif %}
-{% endfor %}
-
 {% endif %}
 
 {% capture wlm_check_hide %}{% include 'wlm-hideByLink' %}{% endcapture %}{% if wlm_check_hide != 'Liquid error: Could not find asset snippets/wlm-hideByLink.liquid' %}{% include 'wlm-hideByLink' %}{% endif %}

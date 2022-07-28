@@ -1,10 +1,5 @@
 {%- assign w_continue = 'no' -%}
-{% assign wlmHideItem_Search = false %}{% assign wlmLockedTags120670 = false %}
-{% for tag in customer.tags %}
-{% if tag == '一等客戶' %}{% assign wlmLockedTags120670 = true %}{% endif %}
-{% endfor %}
-
-
+{% assign wlmHideItem_Search = false %}
 
 {% if wlmHideItem_Search == true %}{% continue %}{% endif %}
 

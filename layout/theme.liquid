@@ -33,6 +33,7 @@
 
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     
+{% include 'wlm-head' %}
 {{ content_for_header }}
 
     {%- liquid
@@ -233,7 +234,7 @@
     {% section 'announcement-bar' %}
     {% section 'header' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {% comment %}{{ content_for_layout }}{% endcomment %}{% render 'easylockdown_body', content_for_layout: content_for_layout, elhDefines: elhRender[1] %}
+      {% comment %}{% comment %}{{ content_for_layout }}{% endcomment %}{% include 'wlm-body' %}{% endcomment %}{% render 'easylockdown_body', content_for_layout: content_for_layout, elhDefines: elhRender[1] %}
     </main>
 
     {% section 'footer' %}

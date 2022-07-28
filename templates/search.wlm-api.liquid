@@ -21,7 +21,7 @@
 {
 	"products":
         [
-            {% for handler in h_array %}{% comment %}EasylockdownFilterBegin{% endcomment %}{% capture easylockdownFilter %}{% render 'easylockdown_filter_search' with handler, easylockdownRender: true, easylockdownItemSelectorOff: easylockdownItemSelectorOff %}{% endcapture %}{% assign easylockdownFilter = easylockdownFilter | strip %}{% if easylockdownFilter == 'continue' %}{% continue %}{% else %}{{ easylockdownFilter }}{% endif %}{% comment %}EasylockdownFilterEnd{% endcomment %}
+            {% for handler in h_array %}
 			{% assign item = all_products[handler] %}
 			{% unless item == empty %}
 				{% include 'wlm-product' with item %}
