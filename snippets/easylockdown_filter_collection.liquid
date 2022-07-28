@@ -1,7 +1,7 @@
 {% assign easylockdownLocationsCan = '' | split: ',' %}{% assign easylockdownLocationsCannot = '' | split: ',' %}{% assign easylockdownPasswordItems = '' | split: ',' %}
 {% assign easylockdownNow = 'now' | date:'%s' | times: 1 %}{% assign easylockdownNowWeekDay = easylockdownNow | date:'%u' %}{% assign easylockdownNowMonthDay = easylockdownNow | date:'%d' %}{% assign easylockdownNowHM = easylockdownNow | date:'%H%M' | times: 1 %}{% if customer %}{% assign easylockdownPlacedOrder = customer.orders.first.created_at | date:'%s' %}{% assign easylockdownOldestPlacedOrder = customer.orders.last.created_at | date:'%s' %}{% assign easylockdownDateDifference = easylockdownNow | minus: easylockdownPlacedOrder %}{% endif %}
 {% assign easylockdownSchedulePeriodON = false %}
-{% if easylockdownNow > 1659146100 and easylockdownNow < 1658973600 %}{% assign easylockdownSchedulePeriodON = true %}{% endif %}
+{% if easylockdownNow > 1658973300 and easylockdownNow < 1658974080 %}{% assign easylockdownSchedulePeriodON = true %}{% endif %}
 {% if easylockdownSchedulePeriodON %}
 {% assign easylockdownCollectionException = false %}
 {% unless easylockdownCollectionException %}
