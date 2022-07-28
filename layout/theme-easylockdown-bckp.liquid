@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
+{% comment %}EasylockdownHeadBegin{% endcomment %}{% capture elhRender %}{% render 'easylockdown_head', easylockdownRender: true, easylockdownCustomPriceSelector: easylockdownCustomPriceSelector %}{% endcapture %}{% assign elhRender = elhRender | split: '--elhResults--'%}{{ elhRender[0] }}{% comment %}EasylockdownHeadEnd{% endcomment %}
 {% render 'pagefly-head' %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,6 +33,7 @@
 
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     
+{% include 'wlm-head' %}
 {{ content_for_header }}
 
     {%- liquid
@@ -214,7 +216,13 @@
     <!-- Upsell & Cross Sell - Selleasy by Logbase - Starts -->
       <script src='https://upsell-app.logbase.io/lb-upsell.js?shop=theme-practice-apo.myshopify.com' defer></script>
     <!-- Upsell & Cross Sell - Selleasy by Logbase - Ends -->
-{% include 'ufe-offer' %}{% render 'weglot_hreftags' %}
+{% include 'ufe-offer' %}
+
+{% if content_for_header contains 'fastbundle.co' %}
+    {% render 'fast_bundle_service' %}
+{% endif %}
+
+{% render 'weglot_hreftags' %}
 {% render 'weglot_switcher' %}
 </head>
 
@@ -226,10 +234,14 @@
     {% section 'announcement-bar' %}
     {% section 'header' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {{ content_for_layout }}
+      {% comment %}{% comment %}{{ content_for_layout }}{% endcomment %}{% include 'wlm-body' %}{% endcomment %}{% render 'easylockdown_body', content_for_layout: content_for_layout, elhDefines: elhRender[1] %}
     </main>
 
     {% section 'footer' %}
+
+    
+
+    
 
     
 
@@ -274,5 +286,21 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-  </body>
+  
+<!-- **BEGIN** Hextom TMS Translator // Main Include - DO NOT MODIFY -->
+    <script src="{{ 'tms-translator.js' | asset_url }}" defer="defer"></script>
+    <!-- **END** Hextom TMS Translator // Main Include - DO NOT MODIFY -->
+        
+
+
+
+
+        
+        
+        
+
+<!-- **BEGIN** Hextom TMS Integration // Main Include - DO NOT MODIFY -->
+    {% render 'hextom_tms_dropdown' %}
+    <!-- **END** Hextom TMS Integration // Main Include - DO NOT MODIFY -->
+</body>
 </html>
