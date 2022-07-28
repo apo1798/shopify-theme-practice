@@ -1,7 +1,66 @@
 {
   "sections": {
+    "1658971971762c681d": {
+      "type": "apo-carousel",
+      "blocks": {
+        "b6c3c786-b52d-4b28-b304-4e7115905677": {
+          "type": "image_carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0623-BN-02-1536x504.jpg",
+            "url": "shopify:\/\/collections\/文具"
+          }
+        },
+        "603f4993-f86a-46ee-9f0d-d71d6e027892": {
+          "type": "image_carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0527BN__-1-1536x504.jpg",
+            "url": "shopify:\/\/collections\/秘密商品"
+          }
+        },
+        "026dbc77-3bb7-4f9b-8bdf-1a6d7be15ef3": {
+          "type": "image_carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1-1-1024x336.jpg",
+            "url": "shopify:\/\/blogs\/文具"
+          }
+        },
+        "3f22542e-d929-4c8e-8cf8-31ae3a1b8c75": {
+          "type": "image_carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Caviar-HousePrunier_Banner-scaled.jpg",
+            "url": "shopify:\/\/blogs\/品牌\/美食星期五大放送"
+          }
+        },
+        "ef5d2633-18a5-437e-8fce-e22494eb057a": {
+          "type": "image_carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Liz_-4-scaled.jpg",
+            "url": "shopify:\/\/collections\/美食加選物"
+          }
+        },
+        "6aeb74c4-8a2f-4608-84c8-2cbdd5fc2887": {
+          "type": "image_carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/home_s5.jpg",
+            "url": "shopify:\/\/pages\/美食限時購"
+          }
+        }
+      },
+      "block_order": [
+        "b6c3c786-b52d-4b28-b304-4e7115905677",
+        "603f4993-f86a-46ee-9f0d-d71d6e027892",
+        "026dbc77-3bb7-4f9b-8bdf-1a6d7be15ef3",
+        "3f22542e-d929-4c8e-8cf8-31ae3a1b8c75",
+        "ef5d2633-18a5-437e-8fce-e22494eb057a",
+        "6aeb74c4-8a2f-4608-84c8-2cbdd5fc2887"
+      ],
+      "settings": {
+        "carousel-interval": 5
+      }
+    },
     "1657161345dd383a18": {
       "type": "apo-carousel",
+      "disabled": true,
       "blocks": {
         "d8d95812-ba1a-4ed7-8c75-0ef89667654c": {
           "type": "image_carousel",
@@ -580,6 +639,7 @@
     }
   },
   "order": [
+    "1658971971762c681d",
     "1657161345dd383a18",
     "1656382515150a1e78",
     "1657096325200c4a34",
