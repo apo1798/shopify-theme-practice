@@ -1,0 +1,273 @@
+{%- if section.settings.padding -%}<style>.kaleido--fundraiser { padding-top: 30px; padding-bottom; 30px; }</style>{%- endif -%}
+{%- if section.settings.width_limit -%}<style>.kaleido--fundraiser { max-width: {{ section.settings.width_limit | remove: "px" }}px !important; margin-left: auto !important; margin-right: auto !important; } </style>{%- endif -%}
+
+{%- assign fundraiser = shop.metafields.fundraiser.amount -%}
+{%- assign goal = fundraiser.goal_amount | times: 100.00 | default: 0 -%}
+{%- assign raised = fundraiser.raised | default: 0 -%}
+
+  {%- for block in section.blocks -%}
+    {%- if block.settings.add_padding -%}{% assign extra_class = "fr--pad" %}{%- endif -%}
+    {%- if block.settings.custom_size -%}{%- assign size = block.settings.custom_size | remove: "px" -%}{%- assign custom_size = 'style="font-size:' | append: size | append: 'px;"' -%}{%- endif -%}
+
+    {%- case block.type -%}
+      {%- when 'name' -%}
+        <div class="fr--title {{ extra_class }}" {{ custom_size }}>{{ fundraiser.name }}</div>
+      {%- when 'subtitle' -%}
+        <div class="fr--subtitle {{ extra_class }}" {{ custom_size }}>{{ block.settings.subtitle }}</div>
+      {%- when 'image_picker' -%}
+        <img class="fr--img {{ extra_class }}" style="{% if block.settings.max_height %}max-height: {{ block.settings.max_height }}px;{% endif %}margin-left: auto; margin-right: auto; display: flex;" src="{{ block.settings.image | img_url: 'master' }}" />
+      {%- when 'image_text' -%}
+        <div class="fr--imgtxt {{ extra_class }}">
+          {%- if block.settings.left_align -%}<div>{{ block.settings.text }}</div>{%- endif -%}
+          <img class="fr--img" src="{{ block.settings.image | img_url: 'master' }}" />
+          {%- unless block.settings.left_align -%}<div>{{ block.settings.text }}</div>{%- endunless -%}
+        </div>
+      {%- when 'currently_collected' -%}
+        {%- assign raised_formatted = raised | money -%}
+        <div class="fr--raised {{ extra_class }}" {{ custom_size }} >{{ block.settings.money_raised | replace: "|FUNDS|", raised_formatted }}</div>
+      {%- when 'progress_bar' -%}
+        {%- assign width = raised | divided_by: goal | times: 100 -%}
+        <div class="fr--progress {{ extra_class }}">
+          <div class="fr--bar">
+            <div class="fr--inner" style="width: {{ width }}%; {% if section.settings.bar_color %}background: {{ section.settings.bar_color }}!important;{% endif %}">
+              {% if block.settings.show_percentage %}<div class="fr--percentage">{{ width | round }}%</div>{% endif %}
+            </div>
+          </div>
+        </div>
+      {%- when 'custom_html' -%}
+        {{ block.settings.custom_html }}
+    {%- endcase -%}
+  {%- endfor -%}
+
+{% schema %}
+  {
+    "name": "Fundraiser",
+	"class": "kaleido--fundraiser",
+    "settings": [
+	  {
+		"type": "header",
+		"content": "CAMPAIGN GOAL & NAME",
+		"info":	"You can set these up in the app. You can find the full guide there too."
+	  },
+	  {
+		"type": "header",
+		"content": "Colors"
+	  },
+	  {
+		"type": "color",
+		"label": "Background Color",
+		"id": "background_color",
+		"default": "#fff"
+	  },
+	  {
+		"type": "color",
+		"label": "Text Color",
+		"id": "text_color",
+		"default": "#000"
+	  },
+	  {
+		"type": "color",
+		"label": "Progress Bar Color",
+		"id": "bar_color",
+		"default": "#4f4492"
+	  },
+	  {
+		"type": "header",
+		"content": "Spacing"
+	  },
+	  {
+		"type": "text",
+		"label": "Fundraiser Max Width",
+		"id": "width_limit",
+		"default": "1200",
+		"info": "If you want to limit the width of the Fundraiser section, add maximum width in pixels"
+   	  },
+	  {
+		"type": "checkbox",
+		"label": "Extra Padding",
+		"info": "If your theme is a little tight, use this to add some padding.",
+		"id": "padding",
+		"default": false
+	  }
+	],
+	"blocks": [
+	  {
+		"type": "name",
+		"name": "Campaign Name",
+		"settings": [
+		  {
+			"type": "header",
+			"content": "Campaign Name",
+			"info": "Name is automatically imported from the app"
+		  },
+		  {
+			"type": "text",
+			"id": "custom_size",
+			"label": "Custom font size (px)"
+		  },
+		  {
+			"type": "checkbox",
+			"id": "add_padding",
+			"label": "Extra Padding",
+			"default": false
+		  }
+		]
+	  },
+	  {
+		"type": "subtitle",
+		"name": "Custom Text",
+		"settings": [
+		  {
+			"type": "text",
+			"id": "subtitle",
+			"label": "Text"
+		  },
+		  {
+			"type": "text",
+			"id": "custom_size",
+			"label": "Custom font size (px)"
+		  },
+		  {
+			"type": "checkbox",
+			"id": "add_padding",
+			"label": "Add Padding",
+			"default": false
+		  }
+		]
+	  },
+	  {
+		"type": "image_picker",
+		"name": "Image",
+		"settings": [
+		  {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Choose an image"
+		  },
+		  {
+			"type": "checkbox",
+			"id": "add_padding",
+			"label": "Add Padding",
+			"default": false
+		  },
+		  {
+			"type": "text",
+			"id": "max_height",
+			"label": "Maximum Image Height (px)",
+			"info": "Leave blank for full image height"
+		  }
+		]
+	  },
+	  {
+		"type": "image_text",
+		"name": "Image and Text",
+		"settings": [
+		  {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Choose an image"
+		  },
+ 		  {
+            "type": "text",
+            "id": "text",
+            "label": "Add some Text"
+		  },
+		  {
+			"type": "checkbox",
+			"id": "left_align",
+			"label": "Left Align Text",
+			"default": false
+		  },
+		  {
+			"type": "checkbox",
+			"id": "add_padding",
+			"label": "Add Padding",
+			"default": false
+		  }
+		]
+	  },
+	  {
+		"type": "currently_collected",
+		"name": "Money Raised",
+		"settings": [
+		  {
+			"type": "text",
+			"id": "money_raised",
+			"label": "Text",
+			"default": "|FUNDS|",
+			"info": "|FUNDS| variable gets auto substituted by the real amount."
+		  },
+		  {
+			"type": "text",
+			"id": "custom_size",
+			"label": "Custom font size (px)"
+		  },
+		  {
+			"type": "checkbox",
+			"id": "add_padding",
+			"label": "Add Padding",
+			"default": false
+		  }
+		]
+	  },
+	  {
+		"type": "progress_bar",
+		"name": "Progress Bar",
+		"settings": [
+		  {
+			"type": "checkbox",
+			"id": "add_padding",
+			"label": "Add Padding",
+			"default": false
+		  },
+		  {
+			"type": "checkbox",
+			"id": "show_percentage",
+			"label": "Show Percentage",
+		    "default": false
+		  }
+		]
+	  },
+	  {
+		"type": "custom_html",
+		"name": "Custom HTML",
+		"settings": [
+		  {
+			"type": "textarea",
+			"id": "custom_html",
+			"label": "Add Custom HTML",
+			"info": "You can embed styles, code, anything you want here"
+		  }
+		]
+	  }
+	],
+	"presets": [
+      {
+        "category": "Kaleido",
+        "name": "Fundraiser"
+      }
+	]
+  }
+{% endschema %}
+
+<style>
+  .kaleido--fundraiser { margin-left: 20px; margin-right: 20px; }
+  .fr--pad { padding-top: 18px; padding-bottom: 18px; }
+  .fr--row { display: flex; align-items: center; justify-content: center; width: 100%; }
+  .fr--title { font-size: 2.5rem; text-align: center; }
+  .fr--img { border-radius: 6px; box-shadow: 1px 1px 10px rgba(0,0,0,.2); -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,.2); padding: 0 !important; }
+  .fr--subtitle, .fr--raised { font-size: 1rem; text-align: center; }
+  .fr--progress { text-align: center; }
+  .fr--imgtxt { display: flex; justify-content: space-between; }
+  .fr--imgtxt > * { flex: 1; width: 50%; }
+  .fr--imgtxt > *:first-child { padding-right: 10px; }
+  .fr--imgtxt > *:last-child { padding-left: 10px; }
+  .fr--bar { background: rgba(0,0,0,.05); height: 30px; width: 100%; border-radius: 6px; overflow: hidden; margin-top: 6px; }
+  .fr--inner { background: #4f4492; width: 50%; height: 100%; border-radius: 3px; position: relative; } 
+  .fr--percentage { color: white; font-size: 15px; position: absolute; right: 10px; font-weight: bold; top: 4px; }
+  @media(max-width: 768px){
+    .fr--imgtxt { flex-wrap: wrap; }
+    .fr--imgtxt > * { padding: 0 !important; width: 100%; }
+    .kaleido--fundraiser { padding-left: 20px !important; padding-right: 20px !important; }
+  }
+</style>
